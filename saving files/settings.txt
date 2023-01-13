@@ -1,0 +1,16 @@
+//数据行以"#"开头
+//注释后面的部分不会被读取
+//自动跳过空格，回车，但数据部分不能有空格
+
+#1//whether introduce or not
+#2//people
+#1//difficulty
+
+#100//player HP
+#100//player bullet
+#100//player sword
+
+#100//CPU HP
+#100//CPU bullet
+#100//CPU sword
+

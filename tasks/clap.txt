@@ -1,0 +1,13 @@
+CCA
+1.0.0 原始版（三个手势）
+2.0.0 加入双枪和反弹
+3.6.2 加入剑
+4.1.0 2人和平
+5.3.0 群战
+
+
+"\n子弹bullet1 给枪shoot2 双枪doubleshoot3 挡block4 双挡doubleblock5 反弹rebound6\n"
+" 拔剑drawasword7 亮剑brandish8 刺stab9 砍chop10 重挡heavy block11 激光枪laser gun12\n"
+" 激光炮laser cannon13 火箭炮RPG14 双火箭炮double RPG15 核弹nuclear bomb16 光剑lightsaber-stab17 光刀lightsaber-chop18\n"
+" 双砍double chop19 鬼斩ghost-chop20 箭尾斩nock-chop21 缴械disarm22 镜面反射specular reflection23 巨盾giant shield24\n"
+"过来comeon25 挑衅provoke26"

@@ -1,0 +1,21 @@
+old_clap overall system
+1.startup
+{	introduction
+	初始化 
+}
+一局的循环
+{
+	clsatbegin::瞬时值清零
+	clseveryturn ::输入值清零，存活人数刷新
+	2.player输入
+	clsbeforesimulation:用_存储状态值
+	3.CPU输入
+	clsaftersimulation:把_存储的状态值释放出来
+	4.行动
+	{	act//赋值瞬时值，需要用到输入值
+		performattack//操作状态值，需要用到瞬时值
+	}
+	clsafteract:用_转存瞬时值
+}
+clsafterall::清除状态值和瞬时值
+2.三次信息转化
