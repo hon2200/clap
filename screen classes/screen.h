@@ -1,5 +1,5 @@
 #pragma once
-#include"i+.h"
+#include"..\all tool files\i+.h"
 //游戏中的显示程序
 class Screen {
 public:

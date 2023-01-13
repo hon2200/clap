@@ -1,4 +1,4 @@
-#include"i++.h"
+#include"..\all tool files\i++.h"
 #include"move.h"
 move_o::move_o() :
 	move(people + 1, 0), at(people + 1, 0)

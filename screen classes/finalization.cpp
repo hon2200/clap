@@ -1,5 +1,5 @@
 #pragma once
-#include"i++.h"
+#include"..\all tool files\i++.h"
 #include"Finalization.h"
 void Finalization::finalscreen()
 {

@@ -1,7 +1,7 @@
-#include"i++.h"
+#include"..\all tool files\i++.h"
 #include"choose_your_action.h"
 #include"check.h"//显然要用到
-#include"Initialization.h"//要用到difficulty
+#include"..\screen classes\Initialization.h"//要用到difficulty
 #include"act.h"//模拟时要用到
 void Choose_your_action::player_in_action()
 {

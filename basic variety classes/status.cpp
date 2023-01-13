@@ -1,5 +1,5 @@
-#include"i++.h"
-#include"Initialization.h"
+#include"..\all tool files\i++.h"
+#include"..\screen classes\Initialization.h"
 
 void status_history_o::value_in()
 {

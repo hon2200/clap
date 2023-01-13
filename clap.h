@@ -1,10 +1,11 @@
 #pragma once
-#include"i++.h"
+//所有头文件的集合
+#include"all tool files/i++.h"
 
-#include"act.h"
-#include"check.h"
-#include"choose_your_action.h"
+#include"functioning classes/act.h"
+#include"functioning classes/check.h"
+#include"functioning classes/choose_your_action.h"
 
-#include"Initialization.h"
-#include"Finalization.h"
-#include"screen.h"
+#include"screen classes/Initialization.h"
+#include"screen classes/Finalization.h"
+#include"screen classes/screen.h"

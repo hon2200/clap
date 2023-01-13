@@ -1,5 +1,5 @@
 #pragma once
-#include"i+.h"
+#include"..\all tool files\i+.h"
 //add瞬时值的结构体
 //存储补给有关信息
 class add_o {

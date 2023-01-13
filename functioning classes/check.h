@@ -1,5 +1,5 @@
 #pragma once
-#include"i+.h"
+#include"..\all tool files\i+.h"
 class Check {
 public:
 	bool ischarge(int move);//参数move行动，若是补给类型返回true

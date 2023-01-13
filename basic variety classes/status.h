@@ -1,5 +1,5 @@
 #pragma once
-#include"i+.h"
+#include"..\all tool files\i+.h"
 //为了调用和改变方便，这里的变量（for now）不定义成private
 //存储4个状态值
 class status_o {

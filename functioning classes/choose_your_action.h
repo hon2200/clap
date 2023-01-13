@@ -1,5 +1,5 @@
 #pragma once
-#include"i+.h"
+#include"..\all tool files\i+.h"
 class Choose_your_action {
 public:
 	//一系列指导玩家行动的程序

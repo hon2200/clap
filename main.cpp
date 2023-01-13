@@ -1,4 +1,3 @@
-#include"i.h"
 #include"clap.h"
 using namespace std;
 int main()
@@ -9,7 +8,7 @@ int main()
 	{
 		//对各个参数和变量初始化
 		turn = 0;
-		Initialization::readin();
+		Initialization::readin("saving files\\settings.txt");
 		Initialization::defineDifficulty();
 		move_history_o::initialization();
 		status_history_o::initialization();
@@ -43,8 +42,8 @@ int main()
 			//人头结算阶段↓//理论上在上回合末，但是为了rule_的正确计算移动到这里
 			ACT.head_gain();
 			people_o::the_refresh_of_people();
-			ACT.fprint_ACTHistory("history.txt");
-			Choose_your_action::print_move_history("move_history.txt");
+			ACT.fprint_ACTHistory("saving files\\history.txt");
+			Choose_your_action::print_move_history("saving files\\history.txt");
 		}
 		//游戏结束了
 		Finalization::finalscreen();

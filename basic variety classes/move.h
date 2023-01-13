@@ -1,5 +1,5 @@
 #pragma once
-#include"i+.h"
+#include"..\all tool files\i+.h"
 //move_o是玩家和电脑的直接输入
 //move_o::move[order],玩家行动序号为order的行动种类，种类与具体哪一个的对应见clap.txt
 //move_o::at[order],玩家行动序号为order的目标，种类与具体哪一个的对应见clap.txt

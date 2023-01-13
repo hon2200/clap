@@ -1,4 +1,4 @@
-#include"i++.h"
+#include"..\all tool files\i++.h"
 void people_o::people_o_in(int n)
 {
 	people_num = n;

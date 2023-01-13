@@ -1,10 +1,10 @@
 #pragma once
-#include"i+.h"
+#include"..\all tool files\i+.h"
 //初始化程序
 class Initialization{
 public:
 	static void introduction();//介绍游戏规则
-	static void readin();//读入
+	static void readin(const char*);//读入
 	static int defineDifficulty();//初始化难度,将difficulty_o转化成难度百分比等级，判定人机采用高级算法的概率
 	//初始各个状态值的返回函数
 	static vector<int> HP0__();

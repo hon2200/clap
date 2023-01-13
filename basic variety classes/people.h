@@ -1,5 +1,5 @@
 #pragma once
-#include"i+.h"
+#include"..\all tool files\i+.h"
 //´æ´¢ÓÎÏ·ÈËÊı
 class people_o {
 private:

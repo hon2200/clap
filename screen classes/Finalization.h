@@ -1,4 +1,5 @@
 #pragma once
+#include"..\all tool files\i+.h"
 //判别游戏是否结束的指令
 class RULE {
 public:

@@ -1,5 +1,5 @@
 #include"Initialization.h"
-#include"people.h"
+#include"..\all tool files\i++.h"
 void Initialization::introduction()
 {
 	printf("clapping:pupil's game\n");
@@ -20,7 +20,7 @@ void Initialization::introduction()
 	printf("\nps:多人时不能使用“双”的攻击");
 }
 
-void Initialization::readin()
+void Initialization::readin(const char* filein)
 {
 	cout << "是否改变默认参数:yes:1，no:0" << endl;
 	bool x = true;
@@ -28,7 +28,7 @@ void Initialization::readin()
 	if (x)
 		readin_keyboard();
 	else
-		readin_file("settings.txt");
+		readin_file(filein);
 }
 
 void Initialization::readin_keyboard()

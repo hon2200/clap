@@ -1,6 +1,6 @@
-#include"i++.h"
+#include"..\all tool files\i++.h"
 #include"check.h"
-#include"Finalization.h"//consume_check要用到unexpected error
+#include"..\screen classes\Finalization.h"//consume_check要用到unexpected error
 #include"act.h"//consume_check要用到consume
 bool Check::ischarge(int move)
 {
