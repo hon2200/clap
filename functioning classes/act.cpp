@@ -301,18 +301,22 @@ void ACT_o::comsume()
 			{
 			case 2: bullet[from]--; break;
 			case 3: bullet[from] -= 2; break;
+			case 6: bullet[from]--; break;
+			case 8: pause[from] += 1; break;
+			case 9: pause[from]++; break;
+			case 10: pause[from] = pause[from] + 2; break;
 			case 12: bullet[from] = bullet[from] - 2; break;
 			case 13: bullet[from] = bullet[from] - HP[to] + 1; break;
 			case 14: bullet[from] = bullet[from] - 3; break;
 			case 15: bullet[from] = bullet[from] - 6; break;
 			case 16: bullet[from] = bullet[from] - 5; break;
-			case 9: pause[from]++; break;
-			case 10: pause[from] = pause[from] + 2; break;
 			case 17: pause[from] = pause[from] + 3; break;
 			case 18: pause[from] = pause[from] + 5; break;
+			case 19: pause[from] = pause[from] + 4; break;
 			case 20: pause[from] = pause[from] + 6; break;
 			case 21: pause[from] = pause[from] + 10; break;
-			case 19: pause[from] = pause[from] + 4; break;
+			case 22: pause[from] += 3; break;
+			case 23: pause[from] += 3; break;
 			}
 		}
 	}
