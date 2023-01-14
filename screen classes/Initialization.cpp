@@ -4,14 +4,14 @@ void Initialization::introduction()
 {
 	printf("clapping:pupil's game\n");
 	printf("最多9个人\n 子弹bullet1 \n 给枪shoot2:消耗一颗子弹 \n 双枪doubleshoot3:消耗两颗子弹 \n 挡block4:格挡单枪和刺 \n"
-		"双挡doubleblock5:格挡双枪和刺 \n 反弹rebound6 : 反弹单枪的伤害，格挡刺 \n"
-		"拔剑drawasword7 : 剑可无限次使用，但消耗完可用的剑后不能再连续使用 \n 亮剑brandish8 : 反弹对方刺的攻击 \n"
+		"双挡doubleblock5:格挡双枪和刺 \n 反弹rebound6 : 反弹单枪的伤害，格挡刺，需一发子弹 \n"
+		"拔剑drawasword7 : 剑可无限次使用，但消耗完可用的剑后不能再连续使用 \n 亮剑brandish8 : 反弹对方刺的攻击，需1把剑 \n"
 		"刺stab9 : 需一把剑 \n 砍chop10 : 需两把剑 \n 重挡heavy block11 : 格挡砍\n 激光枪laser gun12 : 消耗2子弹，造成2伤害\n"
 		"激光炮laser cannon13 : 消耗（对方HP - 1）子弹，一击致命\n 火箭炮RPG14 : 消耗3子弹，造成2伤害\n"
 		"双火箭炮double RPG15 : 消耗6子弹，造成3伤害\n 核弹nuclear bomb16 : 消耗5子弹，对目标造成3伤害，对其他人造成1伤害\n"
 		"光剑lightsaber - stab17:需3剑，造成2伤害的普通刺\n 光刀lightsaber - chop18:需5剑，造成2伤害的普通砍\n"
 		"双砍double chop19 : 需4剑，造成1伤害 鬼斩ghost - chop20 : 需6剑\n 箭尾斩nock - chop21:需10剑，造成2伤害的鬼斩\n"
-		"缴械disarm22 : 防御除了鬼斩外的剑的伤害并使攻击者下回合无法用剑\n 镜面反射specular reflection23 : 反弹光类伤害\n"
+		"缴械disarm22 : 防御除了鬼斩外的剑的伤害并使攻击者下回合无法用剑，需三把剑\n 镜面反射specular reflection23 : 反弹光类伤害，需三把剑\n"
 		"巨盾giant shield24 : 挡住双砍，鬼斩与箭尾斩\n 过来comeon25 : 使其他角色的攻击和补给的目标改为你\n"
 		"挑衅provoke26 : 若对方下一回合未攻击你，则其流失一点体力\n"
 		"攻击力比较：激光炮<刺 = 光剑<砍 = 光刀 = 双砍<单枪 = 双枪 = 激光枪<鬼斩 = 箭尾斩<RPG = 双RPG<核弹\n"

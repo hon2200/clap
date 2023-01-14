@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="存储文件">
+      <UniqueIdentifier>{9db9d6fa-e3a1-46e0-a9db-821d06d576f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\basic variety classes">
+      <UniqueIdentifier>{5795cff2-d2dd-4ca1-8421-2bd4f67461a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\screen classes">
+      <UniqueIdentifier>{f84f8ecb-39f6-49ee-bc99-36d15d781cad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\functioning classes">
+      <UniqueIdentifier>{f84dbb69-7182-4c87-909d-f24afdc4c0af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\functioning classes">
+      <UniqueIdentifier>{2a33c049-e9dc-4337-b9df-bb540aa20c97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\screening classes">
+      <UniqueIdentifier>{b3dbf8d1-ac90-45d2-a0c9-f5eb4f5183a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\basic variety classes">
+      <UniqueIdentifier>{17169684-2b4f-4a14-a2d9-0c9b1bc38044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\all tool files">
+      <UniqueIdentifier>{bae8d063-9f38-4a3b-abf1-48305f832e7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\tool">
+      <UniqueIdentifier>{44507d9e-d32a-4d81-ae42-fb83a8d99468}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="saving files\history.txt">
+      <Filter>存储文件</Filter>
+    </Text>
+    <Text Include="saving files\move_history.txt">
+      <Filter>存储文件</Filter>
+    </Text>
+    <Text Include="saving files\settings.txt">
+      <Filter>存储文件</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="basic variety classes\choice.cpp">
+      <Filter>源文件\basic variety classes</Filter>
+    </ClCompile>
+    <ClCompile Include="basic variety classes\move.cpp">
+      <Filter>源文件\basic variety classes</Filter>
+    </ClCompile>
+    <ClCompile Include="basic variety classes\people.cpp">
+      <Filter>源文件\basic variety classes</Filter>
+    </ClCompile>
+    <ClCompile Include="basic variety classes\status.cpp">
+      <Filter>源文件\basic variety classes</Filter>
+    </ClCompile>
+    <ClCompile Include="basic variety classes\turn.cpp">
+      <Filter>源文件\basic variety classes</Filter>
+    </ClCompile>
+    <ClCompile Include="functioning classes\act.cpp">
+      <Filter>源文件\functioning classes</Filter>
+    </ClCompile>
+    <ClCompile Include="functioning classes\check.cpp">
+      <Filter>源文件\functioning classes</Filter>
+    </ClCompile>
+    <ClCompile Include="functioning classes\choose_your_action.cpp">
+      <Filter>源文件\functioning classes</Filter>
+    </ClCompile>
+    <ClCompile Include="screen classes\finalization.cpp">
+      <Filter>源文件\screening classes</Filter>
+    </ClCompile>
+    <ClCompile Include="screen classes\Initialization.cpp">
+      <Filter>源文件\screening classes</Filter>
+    </ClCompile>
+    <ClCompile Include="screen classes\screen.cpp">
+      <Filter>源文件\screening classes</Filter>
+    </ClCompile>
+    <ClCompile Include="all tool files\tools.cpp">
+      <Filter>源文件\tool</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="clap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="basic variety classes\choice.h">
+      <Filter>头文件\basic variety classes</Filter>
+    </ClInclude>
+    <ClInclude Include="basic variety classes\move.h">
+      <Filter>头文件\basic variety classes</Filter>
+    </ClInclude>
+    <ClInclude Include="basic variety classes\people.h">
+      <Filter>头文件\basic variety classes</Filter>
+    </ClInclude>
+    <ClInclude Include="basic variety classes\status.h">
+      <Filter>头文件\basic variety classes</Filter>
+    </ClInclude>
+    <ClInclude Include="basic variety classes\turn.h">
+      <Filter>头文件\basic variety classes</Filter>
+    </ClInclude>
+    <ClInclude Include="functioning classes\act.h">
+      <Filter>头文件\functioning classes</Filter>
+    </ClInclude>
+    <ClInclude Include="functioning classes\check.h">
+      <Filter>头文件\functioning classes</Filter>
+    </ClInclude>
+    <ClInclude Include="functioning classes\choose_your_action.h">
+      <Filter>头文件\functioning classes</Filter>
+    </ClInclude>
+    <ClInclude Include="screen classes\Finalization.h">
+      <Filter>头文件\screen classes</Filter>
+    </ClInclude>
+    <ClInclude Include="screen classes\Initialization.h">
+      <Filter>头文件\screen classes</Filter>
+    </ClInclude>
+    <ClInclude Include="screen classes\screen.h">
+      <Filter>头文件\screen classes</Filter>
+    </ClInclude>
+    <ClInclude Include="all tool files\i.h">
+      <Filter>头文件\all tool files</Filter>
+    </ClInclude>
+    <ClInclude Include="all tool files\i+.h">
+      <Filter>头文件\all tool files</Filter>
+    </ClInclude>
+    <ClInclude Include="all tool files\i++.h">
+      <Filter>头文件\all tool files</Filter>
+    </ClInclude>
+    <ClInclude Include="all tool files\tools.h">
+      <Filter>头文件\all tool files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
