@@ -78,6 +78,7 @@
 
 #define turn turn_o::turn_
 #define choice choice_o::choice_
+#define activechoice choice_o::activechoice_
 
 #include"i.h"
 #include"tools.h"

@@ -40,9 +40,9 @@ bool Check::isothers(int move)
 
 void Check::move_check(int person, int order)
 {
-	while (comeon_check(m[person].at[order]) || doubleattack_check(m[person].at[order]) || provoke_check(m[person].at[order]))
+	while (comeon_check(m[person].move[order]) || doubleattack_check(m[person].move[order]) || provoke_check(m[person].move[order]))
 	{
-		arbitraryrange(m[person].at[order], people);
+		arbitraryrange(m[person].move[order], people);
 	}
 }
 
@@ -99,7 +99,8 @@ bool Check::provoke_check(int move)
 
 void playerCheck::move_check(int order)
 {
-	while (!isbetween(m[1].move[order], choice) || comeon_check(order) || doubleattack_check(order) || provoke_check(order))
+	while (!isbetween(m[1].move[order], choice) || comeon_check(order) || doubleattack_check(order) || provoke_check(order)
+		|| !activechoice[m[1].move[order]])
 	{
 		if (!isbetween(m[1].move[order], choice))
 		{
@@ -114,17 +115,22 @@ void playerCheck::move_check(int order)
 		switch (comeon_check(order))
 		{
 		case 1:
-			printf("第一回合不可以过来\n");
+			printf("第一回合不可以过来\n请重新输入");
 			scanf("%d", &m[1].move[order]);
 			break;
 		case 2:
-			printf("过来不可以连续\n");
+			printf("过来不可以连续\n请重新输入");
 			scanf("%d", &m[1].move[order]);
 			break;
 		}
 		if (provoke_check(order))
 		{
-			printf("第一回合不可以挑衅\n");
+			printf("第一回合不可以挑衅\n请重新输入");
+			scanf("%d", &m[1].move[order]);
+		}
+		if (!activechoice[m[1].move[order]])
+		{
+			printf("所选行动不可用\n请重新输入");
 			scanf("%d", &m[1].move[order]);
 		}
 	}
@@ -133,7 +139,8 @@ void playerCheck::move_check(int order)
 void playerCheck::attackmove_check(int order)
 {
 	Check check;
-	while (!isbetween(m[1].move[order], choice) || doubleattack_check(order) || !check.isattack(m[1].move[order]))
+	while (!isbetween(m[1].move[order], choice) || doubleattack_check(order) || !check.isattack(m[1].move[order])
+		|| !activechoice[m[1].move[order]])
 	{
 		if (!isbetween(m[1].move[order], choice))
 		{
@@ -148,6 +155,11 @@ void playerCheck::attackmove_check(int order)
 		if (!check.isattack(m[1].move[order]))
 		{
 			printf("不是攻击类型\n请重新输入");
+			scanf("%d", &m[1].move[order]);
+		}
+		if (!activechoice[m[1].move[order]])
+		{
+			printf("所选行动不可用\n请重新输入");
 			scanf("%d", &m[1].move[order]);
 		}
 	}

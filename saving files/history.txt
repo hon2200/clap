@@ -1,8 +1,8 @@
-#1//第1回合player1's order1move
-#1//第1回合player1's order1at
-#14//第1回合player2's order1move
-#1//第1回合player2's order1at
-#1//第2回合player1's order1move
-#1//第2回合player1's order1at
+#15//第1回合player1's order1move
+#2//第1回合player1's order1at
+#5//第1回合player2's order1move
+#2//第1回合player2's order1at
+#15//第2回合player1's order1move
+#2//第2回合player1's order1at
 #17//第2回合player2's order1move
 #1//第2回合player2's order1at

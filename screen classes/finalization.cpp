@@ -27,6 +27,31 @@ bool Finalization::whether_restart()
 		return true;
 }
 
+bool Finalization::whether_exit()
+{
+	cout << "whether exit?yes:1,no:0" << endl;
+	bool x = false;
+	cin >> x;
+	return x;
+}
+
+void Finalization::message(const char* filein)
+{
+	ifstream fIn;
+	fIn.open(filein);
+	if (fIn.fail())
+	{
+		cout << "结束显示文件无法正常打开！" << endl;
+		return;
+	}
+	string s;
+	while (gb_getDataLine(s, fIn))
+	{
+		cout << s << endl;
+	}
+	fIn.close();
+}
+
 bool RULE::rule_()
 {
 	for (int from = 1; from <= people; from++)
@@ -57,4 +82,23 @@ bool RULE::unexpected_error()
 			return true;
 	}
 	return false;
+}
+
+vector<int> RULE::winner()
+{
+	vector<int> winner;
+	for (int i = 1; i <= people; i++)
+	{
+		if (HP[i] > 0)
+			winner.push_back(i);
+	}
+	return winner;
+}
+
+bool RULE::win_or_lose()
+{
+	if (HP[1] > 0)
+		return true;
+	else
+		return false;
 }

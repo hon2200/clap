@@ -36,6 +36,15 @@
     <Filter Include="源文件\tool">
       <UniqueIdentifier>{44507d9e-d32a-4d81-ae42-fb83a8d99468}</UniqueIdentifier>
     </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{a4226a47-c6e4-479b-80c5-4c14973f865e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="存储文件\tutorials">
+      <UniqueIdentifier>{73ee9d6d-56c6-447a-90fc-d4d66de83ac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="存储文件\levels">
+      <UniqueIdentifier>{141f8aa8-dd83-48f4-8f61-79c8371d51c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="saving files\history.txt">
@@ -46,6 +55,21 @@
     </Text>
     <Text Include="saving files\settings.txt">
       <Filter>存储文件</Filter>
+    </Text>
+    <Text Include="..\..\new_clap\clap6.0.0\clap\tasks\clap.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="tutorials\tutorial-level1.txt">
+      <Filter>存储文件\tutorials</Filter>
+    </Text>
+    <Text Include="tutorials\tutorial-level1-inimessage.txt">
+      <Filter>存储文件\tutorials</Filter>
+    </Text>
+    <Text Include="tutorials\tutorial-level1-losemessage.txt">
+      <Filter>存储文件\tutorials</Filter>
+    </Text>
+    <Text Include="tutorials\tutorial-level1-winmessage.txt">
+      <Filter>存储文件\tutorials</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +111,9 @@
     </ClCompile>
     <ClCompile Include="all tool files\tools.cpp">
       <Filter>源文件\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="clap.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

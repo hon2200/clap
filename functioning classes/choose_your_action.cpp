@@ -82,7 +82,8 @@ void Choose_your_action::CPU_in_action()
 			CPUhaveattacked[j].assign(people + 1, 0);//清空，使之为0
 			do {
 				arbitraryrange(m[j].move[1], choice);
-			} while (!check.isattack(m[j].move[1]) && multiattack == 2);//第一次multiattack没什么用？但是若未通过benefit就有用了 
+				check.move_check(j,1);
+			} while ((!check.isattack(m[j].move[1]) && multiattack == 2));//第一次multiattack没什么用？但是若未通过benefit就有用了 
 			//非攻击非挑衅类型
 			if (!check.isattack(m[j].move[1]) && m[j].at[1] != 26)
 				m[j].at[1] = j;

@@ -128,9 +128,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="..\..\new_clap\clap6.0.0\clap\tasks\clap.txt" />
     <Text Include="saving files\history.txt" />
     <Text Include="saving files\move_history.txt" />
     <Text Include="saving files\settings.txt" />
+    <Text Include="tutorials\tutorial-level1-inimessage.txt" />
+    <Text Include="tutorials\tutorial-level1-losemessage.txt" />
+    <Text Include="tutorials\tutorial-level1-winmessage.txt" />
+    <Text Include="tutorials\tutorial-level1.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="all tool files\tools.cpp" />
@@ -139,6 +144,7 @@
     <ClCompile Include="basic variety classes\people.cpp" />
     <ClCompile Include="basic variety classes\status.cpp" />
     <ClCompile Include="basic variety classes\turn.cpp" />
+    <ClCompile Include="clap.cpp" />
     <ClCompile Include="functioning classes\act.cpp" />
     <ClCompile Include="functioning classes\check.cpp" />
     <ClCompile Include="functioning classes\choose_your_action.cpp" />

@@ -1,8 +1,21 @@
 #include"Initialization.h"
 #include"..\all tool files\i++.h"
-void Initialization::introduction()
+void Initialization::choose_a_mode()
 {
-	printf("clapping:pupil's game\n");
+	cout << "clapping:pupil's game" << endl;
+	cout << "新手教程：1，闯关模式：2，自由模式：3，规则介绍：4" << endl;
+	int x = 0;
+	cin >> x;
+	mode = x;
+	if (mode == 4)
+	{
+		introduction();
+		choose_a_mode();
+	}
+}
+
+void Initialization::introduction()//介绍规则
+{
 	printf("最多9个人\n 子弹bullet1 \n 给枪shoot2:消耗一颗子弹 \n 双枪doubleshoot3:消耗两颗子弹 \n 挡block4:格挡单枪和刺 \n"
 		"双挡doubleblock5:格挡双枪和刺 \n 反弹rebound6 : 反弹单枪的伤害，格挡刺，需一发子弹 \n"
 		"拔剑drawasword7 : 剑可无限次使用，但消耗完可用的剑后不能再连续使用 \n 亮剑brandish8 : 反弹对方刺的攻击，需1把剑 \n"
@@ -17,7 +30,6 @@ void Initialization::introduction()
 		"攻击力比较：激光炮<刺 = 光剑<砍 = 光刀 = 双砍<单枪 = 双枪 = 激光枪<鬼斩 = 箭尾斩<RPG = 双RPG<核弹\n"
 		"核弹只能单独使用；其他攻击可对不同玩家同时进行\n"
 		"多人时不能对一个人使用“双”的攻击\n");
-	printf("\nps:多人时不能使用“双”的攻击");
 }
 
 void Initialization::readin(const char* filein)
@@ -33,10 +45,6 @@ void Initialization::readin(const char* filein)
 
 void Initialization::readin_keyboard()
 {
-	printf("是否介绍规则？yes：1 no：0\n");
-	scanf("%d", &whether_introduce);
-	if (whether_introduce)
-		introduction();
 	printf("how many people?");
 	int n = 0;
 	scanf("%d", &n);
@@ -79,9 +87,14 @@ void Initialization::readin_file(const char* settings)
 		return;
 	} // if结束
 	bool getright = true;
-	if (!gb_getData(whether_introduce, fIn))
-		cout << "读入数据失败" << endl;
 	int n = 0;
+	if (!gb_getData(choice, fIn))
+		cout << "读入数据失败" << endl;
+	for (int i = 1; i <= choice; i++)
+	{
+		if (!gb_getData(activechoice[i], fIn))
+			cout << "读入数据失败" << endl;
+	}
 	if (!gb_getData(n, fIn))
 		cout << "读入数据失败" << endl;
 	else
@@ -101,8 +114,6 @@ void Initialization::readin_file(const char* settings)
 	if (!gb_getData(sword0[2], fIn))
 		cout << "读入数据失败" << endl;
 	fIn.close();
-	if (whether_introduce)
-		introduction();
 }
 
 int Initialization::defineDifficulty()
@@ -115,6 +126,23 @@ int Initialization::defineDifficulty()
 	case 4:return 7; break;
 	case 5:return 10; break;
 	}
+}
+
+void Initialization::message(const char* filein)
+{
+	ifstream fIn;
+	fIn.open(filein);
+	if (fIn.fail())
+	{
+		cout << "开始显示文件无法正常打开！" << endl;
+		return;
+	}
+	string s;
+	while (gb_getDataLine(s, fIn))
+	{
+		cout << s << endl;
+	}
+	fIn.close();
 }
 
 vector<int> Initialization::HP0__()
@@ -137,7 +165,11 @@ vector<int> Initialization::pause0__()
 	return pause0;
 }
 
-int Initialization::whether_introduce=0;
+int Initialization::mode_out()
+{
+	return mode;
+}
+
 
 vector<int> Initialization::HP0(3, 0);
 vector<int> Initialization::bullet0(3, 0);
@@ -147,3 +179,5 @@ vector<int> Initialization::pause0(3, 0);
 int Initialization::difficulty_o;//难度等级
 
 int Initialization::bigturn = 0;
+
+int Initialization::mode = 0;
