@@ -76,6 +76,21 @@ void Initialization::readin_keyboard()
 	cin >> bullet0[2];
 	cout << "CPU sword:";
 	cin >> sword0[2];
+	int x;
+	cout << "charge how many bullets once?";
+	cin >> x;
+	add_bullet_num.push_back(0);
+	for (int i = 1; i <= people; i++)
+	{
+		add_bullet_num.push_back(x);
+	}
+	cout << "draw how many swords once?";
+	cin >> x;
+	add_sword_num.push_back(0);
+	for (int i = 1; i <= people; i++)
+	{
+		add_sword_num.push_back(x);
+	}
 }
 
 void Initialization::readin_file(const char* settings)
@@ -97,6 +112,22 @@ void Initialization::readin_file(const char* settings)
 		people_o::people_o_in(n);//对people进行赋值
 	if (!gb_getData(difficulty_o, fIn))
 		cout << "读入数据失败" << endl;
+	add_bullet_num.push_back(0);
+	add_sword_num.push_back(0);
+	for (int i = 1; i <= people; i++)
+	{
+		int x = 0;
+		if (!gb_getData(x, fIn))
+			cout << "读入数据失败" << endl;
+		add_bullet_num.push_back(x);
+	}
+	for (int i = 1; i <= people; i++)
+	{
+		int x = 0;
+		if (!gb_getData(x, fIn))
+			cout << "读入数据失败" << endl;
+		add_sword_num.push_back(x);
+	}
 	activechoice.push_back(vector<int>(0));
 	for (int i = 1; i <= people; i++)
 	{
@@ -180,6 +211,16 @@ vector<int> Initialization::pause0__()
 	return pause0;
 }
 
+vector<int> Initialization::add_bullet_num__()
+{
+	return add_bullet_num;
+}
+
+vector<int> Initialization::add_sword_num__()
+{
+	return add_sword_num;
+}
+
 int Initialization::mode_out()
 {
 	return mode;
@@ -190,6 +231,8 @@ vector<int> Initialization::HP0(3, 0);
 vector<int> Initialization::bullet0(3, 0);
 vector<int> Initialization::sword0(3, 0);
 vector<int> Initialization::pause0(3, 0);
+vector<int> Initialization::add_bullet_num(0);
+vector<int> Initialization::add_sword_num(0);
 
 int Initialization::difficulty_o;//难度等级
 

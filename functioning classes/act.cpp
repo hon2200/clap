@@ -1,6 +1,7 @@
 #pragma once
 #include"..\all tool files\i++.h"
 #include"act.h"
+#include"..\screen classes\Initialization.h"//要用到里面的add_bullet_num,add_sword_num
 ACT_o::ACT_o()
 {
 	vector<vector<vector<int>>>n3_int(people + 1, vector<vector<int>>(people + 1, vector<int>(people + 1, 0)));
@@ -153,9 +154,9 @@ void ACT_o::add__()
 			switch (m[from].move[order])
 			{
 			case 1: add[from][to][order].catagory = 1;
-				add[from][to][order].number = 1; break;//此处暂定是1
+				add[from][to][order].number = Initialization::add_bullet_num__()[from]; break;//此处暂定是1
 			case 7: add[from][to][order].catagory = 2;
-				add[from][to][order].number = 1; break;//此处暂定是1
+				add[from][to][order].number = Initialization::add_sword_num__()[from]; break;//此处暂定是1
 			}
 		}
 	}

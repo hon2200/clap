@@ -1,156 +1,397 @@
-#1//第1回合player1's order1move
-#1//第1回合player1's order1at
-#7//第1回合player2's order1move
-#2//第1回合player2's order1at
-#7//第1回合player3's order1move
-#3//第1回合player3's order1at
-#7//第1回合player4's order1move
-#4//第1回合player4's order1at
-#7//第1回合player5's order1move
-#5//第1回合player5's order1at
-#1//第2回合player1's order1move
-#1//第2回合player1's order1at
-#9//第2回合player2's order1move
-#5//第2回合player2's order1at
-#25//第2回合player3's order1move
-#3//第2回合player3's order1at
-#9//第2回合player4's order1move
-#3//第2回合player4's order1at
-#1//第2回合player5's order1move
-#5//第2回合player5's order1at
-#1//第3回合player1's order1move
-#1//第3回合player1's order1at
-#4//第3回合player2's order1move
-#2//第3回合player2's order1at
-#5//第3回合player3's order1move
-#3//第3回合player3's order1at
-#7//第3回合player4's order1move
-#4//第3回合player4's order1at
-#5//第3回合player5's order1move
-#5//第3回合player5's order1at
-#1//第4回合player1's order1move
-#1//第4回合player1's order1at
-#9//第4回合player2's order1move
-#4//第4回合player2's order1at
-#12//第4回合player3's order1move
-#1//第4回合player3's order1at
-#25//第4回合player4's order1move
-#4//第4回合player4's order1at
-#5//第4回合player5's order1move
-#5//第4回合player5's order1at
-#1//第5回合player1's order1move
-#1//第5回合player1's order1at
-#1//第5回合player2's order1move
-#2//第5回合player2's order1at
-#26//第5回合player3's order1move
-#3//第5回合player3's order1at
-#8//第5回合player4's order1move
-#4//第5回合player4's order1at
-#1//第5回合player5's order1move
-#5//第5回合player5's order1at
-#1//第6回合player1's order1move
-#1//第6回合player1's order1at
-#5//第6回合player2's order1move
-#2//第6回合player2's order1at
-#25//第6回合player3's order1move
-#3//第6回合player3's order1at
-#4//第6回合player4's order1move
-#4//第6回合player4's order1at
-#4//第6回合player5's order1move
-#5//第6回合player5's order1at
-#1//第7回合player1's order1move
-#1//第7回合player1's order1at
-#2//第7回合player2's order1move
-#3//第7回合player2's order1at
-#7//第7回合player3's order1move
-#3//第7回合player3's order1at
-#6//第7回合player4's order1move
-#4//第7回合player4's order1at
-#9//第7回合player5's order1move
-#2//第7回合player5's order1at
-#1//第8回合player1's order1move
-#1//第8回合player1's order1at
-#5//第8回合player2's order1move
-#2//第8回合player2's order1at
-#4//第8回合player3's order1move
-#3//第8回合player3's order1at
-#10//第8回合player4's order1move
-#3//第8回合player4's order1at
-#5//第8回合player5's order1move
-#5//第8回合player5's order1at
-#1//第9回合player1's order1move
-#1//第9回合player1's order1at
-#5//第9回合player2's order1move
-#2//第9回合player2's order1at
-#4//第9回合player4's order1move
-#4//第9回合player4's order1at
-#6//第9回合player5's order1move
-#5//第9回合player5's order1at
-#1//第10回合player1's order1move
-#1//第10回合player1's order1at
-#1//第10回合player2's order1move
-#2//第10回合player2's order1at
-#5//第10回合player4's order1move
-#4//第10回合player4's order1at
-#1//第10回合player5's order1move
-#5//第10回合player5's order1at
-#1//第11回合player1's order1move
-#1//第11回合player1's order1at
-#5//第11回合player2's order1move
-#2//第11回合player2's order1at
-#26//第11回合player4's order1move
-#4//第11回合player4's order1at
-#1//第11回合player5's order1move
-#5//第11回合player5's order1at
-#1//第12回合player1's order1move
-#1//第12回合player1's order1at
-#5//第12回合player2's order1move
-#2//第12回合player2's order1at
-#26//第12回合player4's order1move
-#4//第12回合player4's order1at
-#25//第12回合player5's order1move
-#5//第12回合player5's order1at
-#1//第13回合player1's order1move
-#1//第13回合player1's order1at
-#25//第13回合player2's order1move
-#2//第13回合player2's order1at
-#7//第13回合player4's order1move
-#4//第13回合player4's order1at
-#13//第13回合player5's order1move
-#4//第13回合player5's order1at
-#1//第14回合player1's order1move
-#1//第14回合player1's order1at
-#9//第14回合player5's order1move
-#1//第14回合player5's order1at
-#15//第15回合player1's order1move
-#5//第15回合player1's order1at
-#14//第15回合player5's order1move
-#1//第15回合player5's order1at
-#7//第16回合player1's order1move
-#1//第16回合player1's order1at
-#5//第16回合player5's order1move
-#5//第16回合player5's order1at
-#9//第17回合player1's order1move
-#5//第17回合player1's order1at
-#4//第17回合player5's order1move
-#5//第17回合player5's order1at
-#12//第18回合player1's order1move
-#5//第18回合player1's order1at
-#7//第18回合player5's order1move
-#5//第18回合player5's order1at
-#7//第19回合player1's order1move
-#1//第19回合player1's order1at
-#9//第19回合player5's order1move
-#1//第19回合player5's order1at
-#9//第20回合player1's order1move
-#5//第20回合player1's order1at
-#8//第20回合player5's order1move
-#5//第20回合player5's order1at
-#2//第21回合player1's order1move
-#5//第21回合player1's order1at
-#26//第21回合player5's order1move
-#5//第21回合player5's order1at
-#9//第22回合player1's order1move
-#5//第22回合player1's order1at
-#8//第22回合player5's order1move
-#5//第22回合player5's order1at
+turn 0
+people 2
+alivepeople2
+player 0's HP = 0
+player 0's  bullet=0
+player 0's  sword=0
+player 0's  pause=0
+player 1's HP = 100
+player 1's  bullet=100
+player 1's  sword=100
+player 1's  pause=0
+player 2's HP = 1
+player 2's  bullet=0
+player 2's  sword=0
+player 2's  pause=0
+
+
+
+
+
+turn 1
+people 2
+alivepeople2
+player 0's HP = 0
+player 0's  bullet=0
+player 0's  sword=0
+player 0's  pause=0
+player 1's HP = 100
+player 1's  bullet=200
+player 1's  sword=100
+player 1's  pause=0
+player 2's HP = 1
+player 2's  bullet=1
+player 2's  sword=0
+player 2's  pause=0
+
+player 1's  order 1 move is 1 aims at 1
+player 2's  order 1 move is 1 aims at 2
+
+player 1's  order 1 add is 1 aims at 1 numbers are 100
+player 2's  order 1 add is 1 aims at 2 numbers are 1
+
+
+the wounded player 1's suspected killer source2is1with a head benefit of0
+the wounded player 1's suspected attacker source2is1
+turn 2
+people 2
+alivepeople2
+player 0's HP = 0
+player 0's  bullet=0
+player 0's  sword=0
+player 0's  pause=0
+player 1's HP = 100
+player 1's  bullet=300
+player 1's  sword=100
+player 1's  pause=0
+player 2's HP = 1
+player 2's  bullet=1
+player 2's  sword=0
+player 2's  pause=0
+
+player 1's  order 1 move is 1 aims at 1
+player 2's  order 1 move is 5 aims at 2
+
+player 1's  order 1 add is 1 aims at 1 numbers are 100
+player 2 doblocks 2
+player 2's  order 1 block is 2
+
+
+
+turn 3
+people 2
+alivepeople2
+player 0's HP = 0
+player 0's  bullet=0
+player 0's  sword=0
+player 0's  pause=0
+player 1's HP = 100
+player 1's  bullet=400
+player 1's  sword=100
+player 1's  pause=0
+player 2's HP = 1
+player 2's  bullet=0
+player 2's  sword=0
+player 2's  pause=0
+
+player 1's  order 1 move is 1 aims at 1
+player 2's  order 1 move is 6 aims at 2
+
+player 1's  order 1 add is 1 aims at 1 numbers are 100
+player 2 docas 1
+player 2's  order 1 ca is 1
+
+
+
+turn 4
+people 2
+alivepeople2
+player 0's HP = 0
+player 0's  bullet=0
+player 0's  sword=0
+player 0's  pause=0
+player 1's HP = 100
+player 1's  bullet=400
+player 1's  sword=100
+player 1's  pause=0
+player 2's HP = 1
+player 2's  bullet=1
+player 2's  sword=0
+player 2's  pause=0
+
+player 1's  order 1 move is 1 aims at 1
+player 2's  order 1 move is 25 aims at 2
+
+player 1's  order 1 add is 1 aims at 2 numbers are 1
+player 2's  comeon is1
+
+
+the wounded player 1's suspected killer source2is1with a head benefit of0
+
+turn 5
+people 2
+alivepeople2
+player 0's HP = 0
+player 0's  bullet=0
+player 0's  sword=0
+player 0's  pause=0
+player 1's HP = 100
+player 1's  bullet=500
+player 1's  sword=100
+player 1's  pause=0
+player 2's HP = 1
+player 2's  bullet=0
+player 2's  sword=0
+player 2's  pause=0
+
+player 1's  order 1 move is 1 aims at 1
+player 2's  order 1 move is 6 aims at 2
+
+player 1's  order 1 add is 1 aims at 1 numbers are 100
+player 2 docas 1
+player 2's  order 1 ca is 1
+
+
+the wounded player 1's suspected killer source2is1with a head benefit of0
+the wounded player 1's suspected attacker source2is1
+turn 6
+people 2
+alivepeople2
+player 0's HP = 0
+player 0's  bullet=0
+player 0's  sword=0
+player 0's  pause=0
+player 1's HP = 100
+player 1's  bullet=600
+player 1's  sword=100
+player 1's  pause=0
+player 2's HP = 1
+player 2's  bullet=1
+player 2's  sword=0
+player 2's  pause=0
+
+player 1's  order 1 move is 1 aims at 1
+player 2's  order 1 move is 1 aims at 2
+
+player 1's  order 1 add is 1 aims at 1 numbers are 100
+player 2's  order 1 add is 1 aims at 2 numbers are 1
+
+
+
+turn 7
+people 2
+alivepeople2
+player 0's HP = 0
+player 0's  bullet=0
+player 0's  sword=0
+player 0's  pause=0
+player 1's HP = 100
+player 1's  bullet=700
+player 1's  sword=100
+player 1's  pause=0
+player 2's HP = 1
+player 2's  bullet=1
+player 2's  sword=0
+player 2's  pause=0
+
+player 1's  order 1 move is 1 aims at 1
+player 2's  order 1 move is 4 aims at 2
+
+player 1's  order 1 add is 1 aims at 1 numbers are 100
+player 2 doblocks 1
+player 2's  order 1 block is 1
+
+
+the wounded player 1's suspected killer source2is1with a head benefit of0
+the wounded player 1's suspected attacker source2is1
+turn 8
+people 2
+alivepeople2
+player 0's HP = 0
+player 0's  bullet=0
+player 0's  sword=0
+player 0's  pause=0
+player 1's HP = 100
+player 1's  bullet=800
+player 1's  sword=100
+player 1's  pause=0
+player 2's HP = 1
+player 2's  bullet=1
+player 2's  sword=0
+player 2's  pause=0
+
+player 1's  order 1 move is 1 aims at 1
+player 2's  order 1 move is 4 aims at 2
+
+player 1's  order 1 add is 1 aims at 1 numbers are 100
+player 2 doblocks 1
+player 2's  order 1 block is 1
+
+
+
+turn 9
+people 2
+alivepeople2
+player 0's HP = 0
+player 0's  bullet=0
+player 0's  sword=0
+player 0's  pause=0
+player 1's HP = 100
+player 1's  bullet=900
+player 1's  sword=100
+player 1's  pause=0
+player 2's HP = 1
+player 2's  bullet=2
+player 2's  sword=0
+player 2's  pause=0
+
+player 1's  order 1 move is 1 aims at 1
+player 2's  order 1 move is 1 aims at 2
+
+player 1's  order 1 add is 1 aims at 1 numbers are 100
+player 2's  order 1 add is 1 aims at 2 numbers are 1
+
+
+
+turn 10
+people 2
+alivepeople2
+player 0's HP = 0
+player 0's  bullet=0
+player 0's  sword=0
+player 0's  pause=0
+player 1's HP = 100
+player 1's  bullet=900
+player 1's  sword=100
+player 1's  pause=0
+player 2's HP = 1
+player 2's  bullet=3
+player 2's  sword=0
+player 2's  pause=0
+
+player 1's  order 1 move is 1 aims at 1
+player 2's  order 1 move is 25 aims at 2
+
+player 1's  order 1 add is 1 aims at 2 numbers are 1
+player 2's  comeon is1
+
+
+
+turn 11
+people 2
+alivepeople2
+player 0's HP = 0
+player 0's  bullet=0
+player 0's  sword=0
+player 0's  pause=0
+player 1's HP = 100
+player 1's  bullet=1000
+player 1's  sword=100
+player 1's  pause=0
+player 2's HP = 1
+player 2's  bullet=2
+player 2's  sword=0
+player 2's  pause=0
+
+player 1's  order 1 move is 1 aims at 1
+player 2's  order 1 move is 6 aims at 2
+
+player 1's  order 1 add is 1 aims at 1 numbers are 100
+player 2 docas 1
+player 2's  order 1 ca is 1
+
+
+the wounded player 1's suspected killer source2is1with a head benefit of0
+the wounded player 1's suspected attacker source2is1
+turn 12
+people 2
+alivepeople2
+player 0's HP = 0
+player 0's  bullet=0
+player 0's  sword=0
+player 0's  pause=0
+player 1's HP = 100
+player 1's  bullet=1100
+player 1's  sword=100
+player 1's  pause=0
+player 2's HP = 1
+player 2's  bullet=2
+player 2's  sword=0
+player 2's  pause=0
+
+player 1's  order 1 move is 1 aims at 1
+player 2's  order 1 move is 4 aims at 2
+
+player 1's  order 1 add is 1 aims at 1 numbers are 100
+player 2 doblocks 1
+player 2's  order 1 block is 1
+
+
+
+turn 13
+people 2
+alivepeople2
+player 0's HP = 0
+player 0's  bullet=0
+player 0's  sword=0
+player 0's  pause=0
+player 1's HP = 100
+player 1's  bullet=1200
+player 1's  sword=100
+player 1's  pause=0
+player 2's HP = 1
+player 2's  bullet=2
+player 2's  sword=0
+player 2's  pause=0
+
+player 1's  order 1 move is 1 aims at 1
+player 2's  order 1 move is 4 aims at 2
+
+player 1's  order 1 add is 1 aims at 1 numbers are 100
+player 2 doblocks 1
+player 2's  order 1 block is 1
+
+
+the wounded player 1's suspected killer source2is1with a head benefit of0
+the wounded player 1's suspected attacker source2is1
+turn 14
+people 2
+alivepeople2
+player 0's HP = 0
+player 0's  bullet=0
+player 0's  sword=0
+player 0's  pause=0
+player 1's HP = 100
+player 1's  bullet=1300
+player 1's  sword=100
+player 1's  pause=0
+player 2's HP = 1
+player 2's  bullet=3
+player 2's  sword=0
+player 2's  pause=0
+
+player 1's  order 1 move is 1 aims at 1
+player 2's  order 1 move is 1 aims at 2
+
+player 1's  order 1 add is 1 aims at 1 numbers are 100
+player 2's  order 1 add is 1 aims at 2 numbers are 1
+
+
+the wounded player 1's suspected killer source2is1with a head benefit of0
+the wounded player 1's suspected attacker source2is1
+turn 15
+people 2
+alivepeople2
+player 0's HP = 0
+player 0's  bullet=0
+player 0's  sword=0
+player 0's  pause=0
+player 1's HP = 98
+player 1's  bullet=1400
+player 1's  sword=100
+player 1's  pause=0
+player 2's HP = 1
+player 2's  bullet=1
+player 2's  sword=0
+player 2's  pause=0
+
+player 1's  order 1 move is 1 aims at 1
+player 2's  order 1 move is 12 aims at 1
+
+player 1's  order 1 add is 1 aims at 1 numbers are 100
+player 2's  order 1 shoot is 3 aims at 1
+
+player 2's  attack at 1 in order 1 leveling:4 damaging2
+
+the wounded player 1's suspected killer source2is1with a head benefit of0
+the wounded player 1's suspected attacker source2is1

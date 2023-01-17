@@ -12,6 +12,8 @@ public:
 	static vector<int> bullet0__();
 	static vector<int> sword0__();
 	static vector<int> pause0__();
+	static vector<int> add_bullet_num__();
+	static vector<int> add_sword_num__();
 	static int mode_out();
 private:
 	static void introduction();//介绍游戏规则
@@ -19,6 +21,7 @@ private:
 	static void readin_keyboard();//从键盘上输入初始设定
 private:
 	static vector<int> HP0, bullet0, sword0, pause0;//返回初始各个状态值
+	static vector<int> add_bullet_num, add_sword_num;
 	static int difficulty_o;//难度等级
 	static int bigturn;//暂时没有计
 	static int mode;

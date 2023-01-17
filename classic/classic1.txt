@@ -9,6 +9,13 @@
 #5//people
 #1//difficulty
 
+//bullet add
+#1
+#1
+//sword add
+#1
+#1
+
 //player1
 #1//1 bullet
 #1//2 shoot

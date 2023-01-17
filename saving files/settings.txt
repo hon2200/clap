@@ -5,6 +5,13 @@
 
 #26//choice//这行不变
 
+//bullet add
+#1
+#1
+//sword add
+#1
+#1
+
 #2//people
 #1//difficulty
 

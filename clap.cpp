@@ -162,7 +162,7 @@ void in_game_cycle_o::in_game_cycle()
 		ACT.head_gain();
 		people_o::the_refresh_of_people();
 		ACT.fprint_ACTHistory("saving files\\history.txt");
-		Choose_your_action::print_move_history("saving files\\history.txt");
+		Choose_your_action::print_move_history("saving files\\move_history.txt");
 	}
 	//”Œœ∑Ω· ¯¡À
 }
