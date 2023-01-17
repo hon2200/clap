@@ -1,0 +1,11 @@
+#ini-start
+#damnnnnnnnnnnnnnnnnnnnnnnnnnnn it
+#ini-end
+
+#win-start
+#damnnnnnnnnnnnnnnnnnnnnnnnnnnn winnnnnnnnnnnnnnnnnnnnn\
+#win-end
+
+#lose-start
+#what a fool?!!!!!!!!!!!!!!!!!!
+#lose-end

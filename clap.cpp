@@ -7,13 +7,13 @@ void in_game_cycle_o::tutorial(int startlevel)
 		char settingfile[100];
 		sprintf(settingfile, "tutorials\\tutorial-level%d.txt", level);
 		game_starter(settingfile);
-		tutorial_message(level, 0);
+		message(1, level, 0);
 		while (RULE::rule_())
 		{
 			in_game_cycle();
 		}
 		Finalization::finalscreen();
-		tutorial_message(level, 1);
+		message(1, level, 1);
 		if (!RULE::win_or_lose())
 			level--;
 		game_ender();
@@ -28,13 +28,13 @@ void in_game_cycle_o::levelmode(int startlevel)
 		char settingfile[100];
 		sprintf(settingfile, "levels\\level%d.txt", level);
 		game_starter(settingfile);
-		tutorial_message(level, 0);
+		message(2, level, 0);
 		while (RULE::rule_())
 		{
 			in_game_cycle();
 		}
 		Finalization::finalscreen();
-		tutorial_message(level, 1);
+		message(2, level, 1);
 		if (!RULE::win_or_lose())
 			level--;
 		game_ender();
@@ -57,45 +57,50 @@ void in_game_cycle_o::freemode(const char* filein)
 	}
 }
 
-void in_game_cycle_o::tutorial_message(int level,int ini_or_fin)
+void in_game_cycle_o::classicmode(int catagory)
 {
-	if (ini_or_fin == 0)//ini
+	while (1)
 	{
-		char inifile[100];
-		sprintf(inifile, "tutorials\\tutorial-level%d-inimessage.txt", level);
-		Initialization::message(inifile);
-	}
-	else
-	{
-		char finfile[100];
-		if (RULE::win_or_lose())
-			sprintf(finfile, "tutorials\\tutorial-level%d-winmessage.txt", level);
-		else
+		message(4, catagory, 0);
+		char settingfile[100];
+		sprintf(settingfile, "classic\\classic%d.txt", catagory);
+		game_starter(settingfile);
+		while (RULE::rule_())
 		{
-			sprintf(finfile, "tutorials\\tutorial-level%d-losemessage.txt", level);
+			in_game_cycle();
 		}
-		Finalization::message(finfile);
+		Finalization::finalscreen();
+		message(4, catagory, 1);
+		game_ender();
+		if (!Finalization::whether_restart())
+			break;
 	}
 }
 
-void in_game_cycle_o::levelmode_message(int level,int ini_or_fin)
+void in_game_cycle_o::message(int mode, int level, int ini_or_final)
 {
-	if (ini_or_fin == 0)//ini
+	char fin[100]{};
+	switch (mode)
 	{
-		char inifile[100];
-		sprintf(inifile, "levels\\level%d-inimessage.txt", level);
-		Initialization::message(inifile);
+	case 1:
+		sprintf(fin, "tutorials\\tutorial-level%d-message.txt", level);
+		break;
+	case 2:
+		sprintf(fin, "levels\\level%d-message.txt", level);
+		break;
+	case 3:
+		return;
+	case 4:
+		sprintf(fin, "classic\\classic%d-message.txt", level);
 	}
+	if (ini_or_final == 0)//ini
+		Initialization::message(fin, "ini_start", "ini_end");
 	else
 	{
-		char finfile[100];
 		if (RULE::win_or_lose())
-			sprintf(finfile, "levels\\level%d-winmessage.txt", level);
+			Finalization::message(fin, "win_start", "win_end");
 		else
-		{
-			sprintf(finfile, "levels\\level%d-losemessage.txt", level);
-		}
-		Finalization::message(finfile);
+			Finalization::message(fin, "lose_start", "lose_end");
 	}
 }
 
@@ -116,6 +121,12 @@ void in_game_cycle_o::enter_mode()
 		break;
 	case 3:
 		freemode("saving files\\settings.txt");
+		break;
+	case 4:
+		int mode;
+		cout << "which classic mode?1:peace" << endl;
+		cin >> mode;
+		classicmode(mode);
 		break;
 	}
 }

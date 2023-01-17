@@ -6,7 +6,7 @@ public:
 	static void choose_a_mode();
 	static void readin(const char*);//读入
 	static int defineDifficulty();//初始化难度,将difficulty_o转化成难度百分比等级，判定人机采用高级算法的概率
-	static void message(const char* filein);
+	static void message(const char* filein, const char* startmsg, const char* endmsg);
 	//初始各个状态值的返回函数
 	static vector<int> HP0__();
 	static vector<int> bullet0__();

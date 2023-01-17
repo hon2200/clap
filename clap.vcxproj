@@ -129,12 +129,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="..\..\new_clap\clap6.0.0\clap\tasks\clap.txt" />
+    <Text Include="classic\classic1-message.txt" />
+    <Text Include="classic\classic1.txt" />
+    <Text Include="levels\level1-message.txt" />
+    <Text Include="levels\level1.txt" />
     <Text Include="saving files\history.txt" />
     <Text Include="saving files\move_history.txt" />
     <Text Include="saving files\settings.txt" />
-    <Text Include="tutorials\tutorial-level1-inimessage.txt" />
-    <Text Include="tutorials\tutorial-level1-losemessage.txt" />
-    <Text Include="tutorials\tutorial-level1-winmessage.txt" />
+    <Text Include="tutorials\tutorial-level1-message.txt" />
     <Text Include="tutorials\tutorial-level1.txt" />
   </ItemGroup>
   <ItemGroup>

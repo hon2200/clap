@@ -553,7 +553,7 @@ void ACT_o::performattack()
 						switch (stab[from][to][order])
 						{
 						case 1:
-							if (doblock[to][1] == false && doblock[to][2] == false && (doca[to][0] == true || doca[to][4] == true))
+							if (doblock[to][1] == false && doblock[to][2] == false && doca[to][0] == true && doca[to][4] == true)
 							{
 								HP[to] = HP[to] - attack[from][to].damage[order];
 								ds[to].killer[from] = 1;

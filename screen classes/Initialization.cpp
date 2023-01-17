@@ -3,11 +3,11 @@
 void Initialization::choose_a_mode()
 {
 	cout << "clapping:pupil's game" << endl;
-	cout << "新手教程：1，闯关模式：2，自由模式：3，规则介绍：4" << endl;
+	cout << "新手教程：1，闯关模式：2，自由模式：3，经典模式：4，规则介绍：5" << endl;
 	int x = 0;
 	cin >> x;
 	mode = x;
-	if (mode == 4)
+	if (mode == 5)
 	{
 		introduction();
 		choose_a_mode();
@@ -45,36 +45,37 @@ void Initialization::readin(const char* filein)
 
 void Initialization::readin_keyboard()
 {
-	printf("how many people?");
+	cout<<"how many people?";
 	int n = 0;
-	scanf("%d", &n);
+	cin >> n;
 	people_o::people_o_in(n);
-	printf("Difficulty?(暂时只支持1难度)");
-	scanf("%d", &difficulty_o);
+	cout << "Difficulty?(暂时只支持1难度)";
+	cin >> difficulty_o;
 	difficulty_o = 1;
-	printf("your HP:");
-	scanf("%d", &HP0[1]);
+	cout << "your HP:";
+	cin >> HP0[1];
 	while (HP0[1] == 0)
 	{
-		printf("/ncan't be 0");
-		scanf("%d", &HP0[1]);
+		cout << endl;
+		cout << "can't be 0";
+		cin >> HP0[1];
 	}
-	printf("your bullet:");
-	scanf("%d", &bullet0[1]);
-	printf("your sword:");
-	scanf("%d", &sword0[1]);
-	printf("CPU HP:");
-	scanf("%d", &HP0[2]);
+	cout << "your bullet:";
+	cin >> bullet0[1];
+	cout << "your sword:";
+	cin >> sword0[1];
+	cout << "CPU HP:";
+	cin >> HP0[2];
 	while (HP0[2] == 0)
 	{
-		printf("/ncan't be 0");
-		scanf("%d", &HP0[2]);
+		cout << endl;
+		cout << "can't be 0";
+		cin >> HP0[2];
 	}
-	printf("CPU bullet:");
-	scanf("%d", &bullet0[2]);
-	printf("CPU sword:");
-	scanf("%d", &sword0[2]);
-
+	cout << "CPU bullet:";
+	cin >> bullet0[2];
+	cout << "CPU sword:";
+	cin >> sword0[2];
 }
 
 void Initialization::readin_file(const char* settings)
@@ -131,21 +132,29 @@ int Initialization::defineDifficulty()
 	case 3:return 5; break;
 	case 4:return 7; break;
 	case 5:return 10; break;
+	default:return 0; break;
 	}
 }
 
-void Initialization::message(const char* filein)
+void Initialization::message(const char* filein, const char* startmsg, const char* endmeg)
 {
 	ifstream fIn;
 	fIn.open(filein);
 	if (fIn.fail())
 	{
-		cout << "开始显示文件无法正常打开！" << endl;
+		cout << "结束显示文件无法正常打开！" << endl;
 		return;
 	}
 	string s;
 	while (gb_getDataLine(s, fIn))
 	{
+		if (s == startmsg)
+			break;
+	}
+	while (gb_getDataLine(s, fIn))
+	{
+		if (s == endmeg)
+			break;
 		cout << s << endl;
 	}
 	fIn.close();

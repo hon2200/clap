@@ -14,5 +14,5 @@ public:
 	static void finalscreen();//游戏结束后显示的东西
 	static bool whether_restart();//问玩家要不要接着玩
 	static bool whether_exit();//问玩家要不要退出
-	static void message(const char* filein);
+	static void message(const char* filein, const char* startmsg, const char* endmsg);
 };

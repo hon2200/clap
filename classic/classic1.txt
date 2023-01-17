@@ -1,0 +1,159 @@
+//数据行以"#"开头
+//注释后面的部分不会被读取
+//自动跳过空格，回车，但数据部分不能有空格
+//列举所有可用选择：1表示可用，0表示不可用
+//5人和平
+
+#26//choice//这行不变
+
+#5//people
+#1//difficulty
+
+//player1
+#1//1 bullet
+#1//2 shoot
+#1//3 double shoot
+#1//4 block
+#1//5 double block
+#1//6 rebound
+#1//7 draw a sword
+#1//8 brandish
+#1//9 stab
+#1//10 chop
+#1//11 heavy block
+#1//12 laser gun
+#1//13 laser cannon
+#1//14 RPG
+#1//15 double RPG
+#1//16 nuclear bomb
+#1//17 lightsaber-stab
+#1//18 lightsaber-chop
+#1//19 double chop
+#1//20 ghost chop
+#1//21 nock-chop
+#1//22 disarm
+#1//23 specular reflection
+#1//24 giant shield
+#1//25 comeon
+#1//26 provoke
+
+//player2
+#1//1 bullet
+#1//2 shoot
+#1//3 double shoot
+#1//4 block
+#1//5 double block
+#1//6 rebound
+#1//7 draw a sword
+#1//8 brandish
+#1//9 stab
+#1//10 chop
+#1//11 heavy block
+#1//12 laser gun
+#1//13 laser cannon
+#1//14 RPG
+#1//15 double RPG
+#1//16 nuclear bomb
+#1//17 lightsaber-stab
+#1//18 lightsaber-chop
+#1//19 double chop
+#1//20 ghost chop
+#1//21 nock-chop
+#1//22 disarm
+#1//23 specular reflection
+#1//24 giant shield
+#1//25 comeon
+#1//26 provoke
+
+//player3
+#1//1 bullet
+#1//2 shoot
+#1//3 double shoot
+#1//4 block
+#1//5 double block
+#1//6 rebound
+#1//7 draw a sword
+#1//8 brandish
+#1//9 stab
+#1//10 chop
+#1//11 heavy block
+#1//12 laser gun
+#1//13 laser cannon
+#1//14 RPG
+#1//15 double RPG
+#1//16 nuclear bomb
+#1//17 lightsaber-stab
+#1//18 lightsaber-chop
+#1//19 double chop
+#1//20 ghost chop
+#1//21 nock-chop
+#1//22 disarm
+#1//23 specular reflection
+#1//24 giant shield
+#1//25 comeon
+#1//26 provoke
+
+//player4
+#1//1 bullet
+#1//2 shoot
+#1//3 double shoot
+#1//4 block
+#1//5 double block
+#1//6 rebound
+#1//7 draw a sword
+#1//8 brandish
+#1//9 stab
+#1//10 chop
+#1//11 heavy block
+#1//12 laser gun
+#1//13 laser cannon
+#1//14 RPG
+#1//15 double RPG
+#1//16 nuclear bomb
+#1//17 lightsaber-stab
+#1//18 lightsaber-chop
+#1//19 double chop
+#1//20 ghost chop
+#1//21 nock-chop
+#1//22 disarm
+#1//23 specular reflection
+#1//24 giant shield
+#1//25 comeon
+#1//26 provoke
+
+//player5
+#1//1 bullet
+#1//2 shoot
+#1//3 double shoot
+#1//4 block
+#1//5 double block
+#1//6 rebound
+#1//7 draw a sword
+#1//8 brandish
+#1//9 stab
+#1//10 chop
+#1//11 heavy block
+#1//12 laser gun
+#1//13 laser cannon
+#1//14 RPG
+#1//15 double RPG
+#1//16 nuclear bomb
+#1//17 lightsaber-stab
+#1//18 lightsaber-chop
+#1//19 double chop
+#1//20 ghost chop
+#1//21 nock-chop
+#1//22 disarm
+#1//23 specular reflection
+#1//24 giant shield
+#1//25 comeon
+#1//26 provoke
+
+
+#5//player HP
+#0//player bullet
+#0//player sword
+
+#5//CPU HP
+#0//CPU bullet
+#0//CPU sword

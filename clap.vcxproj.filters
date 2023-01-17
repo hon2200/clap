@@ -45,6 +45,9 @@
     <Filter Include="存储文件\levels">
       <UniqueIdentifier>{141f8aa8-dd83-48f4-8f61-79c8371d51c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="存储文件\classic">
+      <UniqueIdentifier>{5fcb641f-c967-4d30-8429-912a437ef06d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="saving files\history.txt">
@@ -62,14 +65,20 @@
     <Text Include="tutorials\tutorial-level1.txt">
       <Filter>存储文件\tutorials</Filter>
     </Text>
-    <Text Include="tutorials\tutorial-level1-inimessage.txt">
+    <Text Include="tutorials\tutorial-level1-message.txt">
       <Filter>存储文件\tutorials</Filter>
     </Text>
-    <Text Include="tutorials\tutorial-level1-losemessage.txt">
-      <Filter>存储文件\tutorials</Filter>
+    <Text Include="levels\level1.txt">
+      <Filter>存储文件\levels</Filter>
     </Text>
-    <Text Include="tutorials\tutorial-level1-winmessage.txt">
-      <Filter>存储文件\tutorials</Filter>
+    <Text Include="levels\level1-message.txt">
+      <Filter>存储文件\levels</Filter>
+    </Text>
+    <Text Include="classic\classic1.txt">
+      <Filter>存储文件\classic</Filter>
+    </Text>
+    <Text Include="classic\classic1-message.txt">
+      <Filter>存储文件\classic</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>

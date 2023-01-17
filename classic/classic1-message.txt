@@ -1,0 +1,11 @@
+#ini-start
+#Welcome to peace mode
+#ini-end
+
+#win-start
+#the world is back to peace again
+#win-end
+
+#lose-start
+#maybe this is destiny?
+#lose-end

@@ -7,24 +7,24 @@ void Choose_your_action::player_in_action()
 {
 	playerCheck playercheck;
 	Check check;
-	scanf("%d", &m[1].move[1]);
+	cin >> m[1].move[1];
 	playercheck.move_check(1);
 	if (check.isattack(m[1].move[1]))//攻击类型
 	{
-		printf("目标？");
-		scanf("%d", &m[1].at[1]);
+		cout << "目标？";
+		cin >> m[1].at[1];
 		vector<bool> haveattacked(people + 1, false);
 		playercheck.at_check(1, haveattacked);
 		haveattacked[m[1].at[1]] = true;
 		for (int order = 2; ; order++)//第几个攻击
 		{
 			printf("其他攻击？（没有请输入0）");
-			scanf("%d", &m[1].move[order]);
+			cin >> m[1].move[order];
 			if (m[1].move[order])
 			{
 				playercheck.attackmove_check(order);
-				printf("目标？");
-				scanf("%d", &m[1].at[order]);
+				cout << "目标？";
+				cin >> m[1].at[order];
 				playercheck.at_check(order, haveattacked);
 				haveattacked[m[1].at[order]] = true;
 			}
@@ -34,15 +34,15 @@ void Choose_your_action::player_in_action()
 	}
 	else if (m[1].move[1] == 26)//挑衅类型
 	{
-		printf("目标？");
-		scanf("%d", &m[1].at[1]);
+		cout << "目标？";
+		cin >> m[1].at[1];
 		vector<bool> haveattacked(people + 1, false);
 		playercheck.at_check(1, haveattacked);
-		haveattacked[m[1].at[1]] == true;
+		haveattacked[m[1].at[1]] = true;
 		for (int order = 2; ; order++)//第几个攻击
 		{
-			printf("挑衅其他人？（没有请输入0）");
-			scanf("%d", &m[1].at[order]);
+			cout << "挑衅其他人？（没有请输入0）";
+			cin >> m[1].at[order];
 			if (m[1].at[order])
 			{
 				playercheck.at_check(order, haveattacked);
@@ -58,7 +58,8 @@ void Choose_your_action::player_in_action()
 	}
 	if (playercheck.consume_check())
 	{
-		printf("\n资源不够！");
+		cout << endl;
+		cout << "资源不够！";
 		player_in_action();//再走一次
 	}
 }

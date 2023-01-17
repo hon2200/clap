@@ -108,7 +108,7 @@ bool gb_getData(int& n, ifstream& file)
 {
     n = 0;
     string s;
-    if (gb_getDataLine(s,file))
+    if (gb_getDataLine(s, file))
     {
         ofstream f;
         f.open("middle.txt");
@@ -140,6 +140,8 @@ bool gb_getData(int& n, ifstream& file)
             }
         }
     }
+    else
+        return false;
 }
 
 

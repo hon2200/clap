@@ -69,6 +69,6 @@
 #100//player bullet
 #100//player sword
 
-#1//CPU HP
-#0//CPU bullet
-#0//CPU sword
+#2//CPU HP
+#2//CPU bullet
+#2//CPU sword

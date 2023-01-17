@@ -19,10 +19,10 @@ private:
 	static void levelmode(int startlevel);
 	//自由模式
 	static void freemode(const char* filein);
-	//教程关卡的提示信息
-	static void tutorial_message(int level,int ini_or_fin);
-	//闯关关卡的提示信息
-	static void levelmode_message(int level,int ini_or_fin);
+	//经典模式
+	static void classicmode(int catagory);
+	//提示信息
+	static void message(int mode, int level, int ini_or_final);
 	//教程关卡上限
 	static int Maxlevel_tutorial;
 	//闯关关卡上限

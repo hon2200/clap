@@ -35,7 +35,7 @@ bool Finalization::whether_exit()
 	return x;
 }
 
-void Finalization::message(const char* filein)
+void Finalization::message(const char* filein, const char* startmsg, const char* endmeg)
 {
 	ifstream fIn;
 	fIn.open(filein);
@@ -47,6 +47,13 @@ void Finalization::message(const char* filein)
 	string s;
 	while (gb_getDataLine(s, fIn))
 	{
+		if (s == startmsg)
+			break;
+	}
+	while (gb_getDataLine(s, fIn))
+	{
+		if (s == endmeg)
+			break;
 		cout << s << endl;
 	}
 	fIn.close();
