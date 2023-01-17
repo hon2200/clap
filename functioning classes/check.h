@@ -28,7 +28,7 @@ private:
 	* true:第一回合挑衅
 	* false:无事发生
 	*/
-	int comeon_check(int move);
+	int comeon_check(int person,int order);
 	/*
 	* 1：第一回合过来
 	* 2：连续过来

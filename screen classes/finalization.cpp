@@ -5,22 +5,22 @@ void Finalization::finalscreen()
 {
 	if (RULE::unexpected_error())
 	{
-		printf("system_error");
+		cout << "system_error" << endl;
 		return;
 	}
 	if (alivepeople == 0)
-		printf("nobody wins\n");
+		cout << "nobody wins" << endl;
 	else if (HP[1] > 0)
-		printf("you win\n");
+		cout << "you win" << endl;
 	else
-		printf("you lose\n");
+		cout << "you lose" << endl;
 }
 
 bool Finalization::whether_restart()
 {
-	printf("Play again?yes:1,no:0");
+	cout << "Play again?yes:1,no:0" << endl;
 	int u = 0;
-	scanf("%d", &u);
+	cin >> u;
 	if (u == 0)
 		return false;
 	else

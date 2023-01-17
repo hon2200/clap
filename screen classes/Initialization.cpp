@@ -90,17 +90,23 @@ void Initialization::readin_file(const char* settings)
 	int n = 0;
 	if (!gb_getData(choice, fIn))
 		cout << "读入数据失败" << endl;
-	for (int i = 1; i <= choice; i++)
-	{
-		if (!gb_getData(activechoice[i], fIn))
-			cout << "读入数据失败" << endl;
-	}
 	if (!gb_getData(n, fIn))
 		cout << "读入数据失败" << endl;
 	else
 		people_o::people_o_in(n);//对people进行赋值
 	if (!gb_getData(difficulty_o, fIn))
 		cout << "读入数据失败" << endl;
+	activechoice.push_back(vector<int>(0));
+	for (int i = 1; i <= people; i++)
+	{
+		activechoice.push_back(vector<int>(1));
+		for (int j = 1; j <= choice; j++)
+		{
+			activechoice[i].push_back(0);
+			if (!gb_getData(activechoice[i][j], fIn))
+				cout << "读入数据失败" << endl;
+		}
+	}
 	if (!gb_getData(HP0[1], fIn))
 		cout << "读入数据失败" << endl;
 	if (!gb_getData(bullet0[1], fIn))

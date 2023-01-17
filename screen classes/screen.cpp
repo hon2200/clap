@@ -2,22 +2,56 @@
 #include"screen.h"
 void Screen::print_turn()
 {
-	printf("turn %d\n", turn);
+	cout << "turn" << turn << endl;
 }
 
 void Screen::print_actionguide()
 {
-	printf("\n◊”µØbullet1 ∏¯«πshoot2 À´«πdoubleshoot3 µ≤block4 À´µ≤doubleblock5 ∑¥µØrebound6\n"
-		" ∞ŒΩ£drawasword7 ¡¡Ω£brandish8 ¥Ãstab9 ø≥chop10 ÷ÿµ≤heavy block11 º§π‚«πlaser gun12\n"
-		" º§π‚≈⁄laser cannon13 ªº˝≈⁄RPG14 À´ªº˝≈⁄double RPG15 ∫ÀµØnuclear bomb16 π‚Ω£lightsaber-stab17 π‚µ∂lightsaber-chop18\n"
-		" À´ø≥double chop19 πÌ’∂ghost-chop20 º˝Œ≤’∂nock-chop21 Ω…–µdisarm22 æµ√Ê∑¥…‰specular reflection23 æﬁ∂‹giant shield24\n"
-		"π˝¿¥comeon25 ÃÙ–∆provoke26\n");
-	printf("«Î ‰»Î£∫");
+	vector<string> name;
+	for (int i = 1; i <= choice; i++)
+	{
+		if(activechoice[1][i])
+		switch (i)
+		{
+		case 1:name.push_back("◊”µØbullet1 "); break;
+		case 2:name.push_back("∏¯«πshoot2 "); break;
+		case 3:name.push_back("À´«πdoubleshoot3 "); break;
+		case 4:name.push_back("µ≤block4 "); break;
+		case 5:name.push_back("À´µ≤doubleblock5 "); break;
+		case 6:name.push_back("∑¥µØrebound6 "); break;
+		case 7:name.push_back("∞ŒΩ£drawasword7 "); break;
+		case 8:name.push_back("¡¡Ω£brandish8 "); break;
+		case 9:name.push_back("¥Ãstab9 "); break;
+		case 10:name.push_back("ø≥chop10 "); break;
+		case 11:name.push_back("÷ÿµ≤heavy block11 "); break;
+		case 12:name.push_back("º§π‚«πlaser gun12"); break;
+		case 13:name.push_back("º§π‚≈⁄laser cannon13 "); break;
+		case 14:name.push_back("ªº˝≈⁄RPG14 "); break;
+		case 15:name.push_back("À´ªº˝≈⁄double RPG15 "); break;
+		case 16:name.push_back("∫ÀµØnuclear bomb16 "); break;
+		case 17:name.push_back("π‚Ω£lightsaber-stab17 "); break;
+		case 18:name.push_back("π‚µ∂lightsaber-chop18 "); break;
+		case 19:name.push_back("À´ø≥double chop19 "); break;
+		case 20:name.push_back("πÌ’∂ghost-chop20 "); break;
+		case 21:name.push_back("º˝Œ≤’∂nock-chop21 "); break;
+		case 22:name.push_back("Ω…–µdisarm22 "); break;
+		case 23:name.push_back("æµ√Ê∑¥…‰specular reflection23 "); break;
+		case 24:name.push_back("æﬁ∂‹giant shield24 "); break;
+		case 25:name.push_back("π˝¿¥comeon25 "); break;
+		case 26:name.push_back("ÃÙ–∆provoke26 "); break;
+		}
+	}
+	for (int i = 0; i < name.size(); i++)
+	{
+		cout << name[i];
+	}
+	cout << endl;
+	cout << "«Î ‰»Î£∫";
 }
 
 void Screen::print_act()
 {
-	printf("\n");
+	cout << endl;
 	for (int from = 1; from <= people; from++)
 	{
 		for (int order = 1; order <= people; order++)
@@ -25,32 +59,32 @@ void Screen::print_act()
 			int to = m[from].at[order];
 			switch (m[from].move[order])//player%d––∂Ø
 			{
-			case 1:printf("player%d charge the bullet\n", from); break;
-			case 2:printf("player%d shoot at%d\n", from, to); break;
-			case 3:printf("player%d double shoot at%d\n", from, to); break;
-			case 4:printf("player%d block \n", from); break;
-			case 5:printf("player%d double block\n", from); break;
-			case 6:printf("player%d rebounce\n", from); break;
-			case 7:printf("player%d draw a sword\n", from); break;
-			case 8:printf("player%d brandish\n", from); break;
-			case 9:printf("player%d stab at%d\n", from, to); break;
-			case 10:printf("player%d chop at%d\n", from, to); break;
-			case 11:printf("player%d heavy block\n", from); break;
-			case 12:printf("player%d fire lazer gun at%d\n", from, to); break;
-			case 13:printf("player%d fire lazer cannon at%d\n", from, to); break;
-			case 14:printf("player%d launch RPG at%d\n", from, to); break;
-			case 15:printf("player%d launch double RPG at%d\n", from, to); break;
-			case 16:printf("player%d launch nuclear bomb at%d\n", from, to); break;
-			case 17:printf("player%d lightsaber-stab at%d\n", from, to); break;
-			case 18:printf("player%d lightsaber-chop at%d\n", from, to); break;
-			case 19:printf("player%d double chop at%d\n", from, to); break;
-			case 20:printf("player%d ghost-chop at%d\n", from, to); break;
-			case 21:printf("player%d nock-chop at%d\n", from, to); break;
-			case 22:printf("player%d disarm\n", from); break;
-			case 23:printf("player%d specular reflection\n", from); break;
-			case 24:printf("player%d giant shield\n", from); break;
-			case 25:printf("player%d comeon\n", from); break;
-			case 26:printf("player%d provoke player%d\n", from, to); break;
+			case 1:cout << "player" << from << " charge the bullet" << endl; break;
+			case 2:cout << "player" << from << " shoot at player" << to << endl; break;
+			case 3:cout << "player" << from << " double shoot at player" << to << endl; break;
+			case 4:cout << "player" << from << " block" << endl; break;
+			case 5:cout << "player" << from << " double block" << endl; break;
+			case 6:cout << "player" << from << " rebounce" << endl; break;
+			case 7:cout << "player" << from << "draw a sword" << endl; break;
+			case 8:cout << "player" << from << " brandish" << endl; break;
+			case 9:cout << "player" << from << " stab at player" << to << endl; break;
+			case 10:cout << "player" << from << " chop at player" << to << endl; break;
+			case 11:cout << "player" << from << " heavy block" << endl; break;
+			case 12:cout << "player" << from << " fire laser gun at player" << to << endl; break;
+			case 13:cout << "player" << from << " fire laser cannoe at player" << to << endl; break;
+			case 14:cout << "player" << from << " launch RPG at player" << to << endl; break;
+			case 15:cout << "player" << from << " launch double RPG at player" << to << endl; break;
+			case 16:cout << "player" << from << " launch nuclear bomb at player" << to << endl; break;
+			case 17:cout << "player" << from << " lightsaber-stab at player" << to << endl; break;
+			case 18:cout << "player" << from << " lightsaber-chop at player" << to << endl; break;
+			case 19:cout << "player" << from << " double chop at player" << to << endl; break;
+			case 20:cout << "player" << from << " ghost-chop at player" << to << endl; break;
+			case 21:cout << "player" << from << " nock-chop at player" << to << endl; break;
+			case 22:cout << "player" << from << " disarm" << endl; break;
+			case 23:cout << "player" << from << " specular reflection" << endl; break;
+			case 24:cout << "player" << from << " giant shield" << endl; break;
+			case 25:cout << "player" << from << " come on" << endl; break;
+			case 26:cout << "player" << from << " provoke player" << to << endl; break;
 			}
 		}
 	}
@@ -61,6 +95,12 @@ void Screen::print_status()
 	for (int from = 1; from <= people; from++)
 	{
 		if (HP_[from] > 0)//≤ªœ‘ æÀ¿»À◊¥Ã¨ 
-			printf("\nplayer%d's HP:%d\nplayer%d's bullet:%d \nplayer%d's sword:%d \nplayer%d's available sword:%d\n", from, HP[from], from, bullet[from], from, sword[from], from, sword[from] - pause[from]);
+		{
+			cout << endl;
+			cout << "player" << from << "'s HP:" << HP[from] << endl;
+			cout << "player" << from << "'s bullet:" << bullet[from] << endl;
+			cout << "player" << from << "'s sword:" << sword[from] << endl;
+			cout << "player" << from << "'s available sword:" << sword[from] - pause[from] << endl;
+		}
 	}
 }
