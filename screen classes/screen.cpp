@@ -1,16 +1,16 @@
 #include"..\all tool files\i++.h"
 #include"screen.h"
-void Screen::print_turn()
+void Screen::printTurn()
 {
 	cout << "turn" << turn << endl;
 }
 
-void Screen::print_actionguide()
+void Screen::printActionGuide()
 {
 	vector<string> name;
 	for (int i = 1; i <= choice; i++)
 	{
-		if(activechoice[1][i])
+		if(active_choice[1][i])
 		switch (i)
 		{
 		case 1:name.push_back("×Óµ¯bullet1 "); break;
@@ -49,7 +49,7 @@ void Screen::print_actionguide()
 	cout << "ÇëÊäÈë£º";
 }
 
-void Screen::print_act()
+void Screen::printAct()
 {
 	cout << endl;
 	for (int from = 1; from <= people; from++)
@@ -90,7 +90,7 @@ void Screen::print_act()
 	}
 }
 
-void Screen::print_status()
+void Screen::printStatus()
 {
 	for (int from = 1; from <= people; from++)
 	{

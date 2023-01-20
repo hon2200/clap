@@ -1,7 +1,7 @@
 #include"..\all tool files\i++.h"
 #include"check.h"
-#include"..\screen classes\Finalization.h"//consume_check要用到unexpected error
-#include"act.h"//consume_check要用到consume
+#include"..\screen classes\Finalization.h"//consumeCheck要用到unexpected error
+#include"act.h"//consumeCheck要用到consume
 bool Check::ischarge(int move)
 {
 	if (move == 1 || move == 7)
@@ -38,33 +38,33 @@ bool Check::isothers(int move)
 	return false;
 }
 
-void Check::move_check(int person, int order)
+void Check::moveCheck(int person, int order)
 {
-	while (comeon_check(person,order) || doubleattack_check(m[person].move[order]) || provoke_check(m[person].move[order])
-		|| !activechoice[person][m[person].move[order]])
+	while (comeonCheck(person,order) || doubleattackCheck(m[person].move[order]) || provokeCheck(m[person].move[order])
+		|| !active_choice[person][m[person].move[order]])
 	{
 		arbitraryrange(m[person].move[order], people);
 	}
 }
 
-void Check::at_check(int self, int order, vector<bool> haveattacked)
+void Check::atCheck(int self, int order, vector<bool> haveattacked)
 {
-	while (multiattack_target_check(self, m[self].at[order], haveattacked))
+	while (multiattackTargetCheck(self, m[self].at[order], haveattacked))
 	{
 		arbitraryrange(m[self].at[order], people);
 	}
 }
 
-void Check::attackmove_check(int person, int order)
+void Check::attackmoveCheck(int person, int order)
 {
-	while (doubleattack_check(m[person].move[order]) || !isattack(m[person].move[order])
-		|| !activechoice[person][m[person].move[order]])
+	while (doubleattackCheck(m[person].move[order]) || !isattack(m[person].move[order])
+		|| !active_choice[person][m[person].move[order]])
 	{
 		arbitraryrange(m[person].move[order], people);
 	}
 }
 
-int Check::multiattack_target_check(int self, int at, vector<bool> haveattacked)
+int Check::multiattackTargetCheck(int self, int at, vector<bool> haveattacked)
 {
 	if (at == self)
 		return 1;
@@ -75,7 +75,7 @@ int Check::multiattack_target_check(int self, int at, vector<bool> haveattacked)
 	return 0;
 }
 
-bool Check::doubleattack_check(int move)
+bool Check::doubleattackCheck(int move)
 {
 	if ((move == 3 || move == 15 || move == 19) && alivepeople > 2)
 		return true;
@@ -83,7 +83,7 @@ bool Check::doubleattack_check(int move)
 		return false;
 }
 
-int Check::comeon_check(int person,int order)
+int Check::comeonCheck(int person,int order)
 {
 	if (m[person].move[order] == 25 && m_[person].move[order] == 25)
 		return 2;
@@ -92,29 +92,29 @@ int Check::comeon_check(int person,int order)
 	return 0;
 }
 
-bool Check::provoke_check(int move)
+bool Check::provokeCheck(int move)
 {
 	if (turn == 1 && move == 26)
 		return 1;
 	return 0;
 }
 
-void playerCheck::move_check(int order)
+void playerCheck::moveCheck(int order)
 {
-	while (!isbetween(m[1].move[order], choice) || comeon_check(order) || doubleattack_check(order) || provoke_check(order)
-		|| !activechoice[1][m[1].move[order]])
+	while (!isbetween(m[1].move[order], choice) || comeonCheck(order) || doubleattackCheck(order) || provokeCheck(order)
+		|| !active_choice[1][m[1].move[order]])
 	{
 		if (!isbetween(m[1].move[order], choice))
 		{
 			cout << "不在可选范围" << endl << "请重新输入";
 			cin >> m[1].move[order];
 		}
-		if (doubleattack_check(order))
+		if (doubleattackCheck(order))
 		{
 			cout << "多人时不能使用双的攻击" << endl << "请重新输入";
 			cin >> m[1].move[order];
 		}
-		switch (comeon_check(order))
+		switch (comeonCheck(order))
 		{
 		case 1:
 			cout<<"第一回合不可以过来"<<endl<<"请重新输入";
@@ -125,12 +125,12 @@ void playerCheck::move_check(int order)
 			cin >> m[1].move[order];
 			break;
 		}
-		if (provoke_check(order))
+		if (provokeCheck(order))
 		{
 			cout << "第一回合不可以挑衅" << endl << "请重新输入";
 			cin >> m[1].move[order];
 		}
-		if (!activechoice[1][m[1].move[order]])
+		if (!active_choice[1][m[1].move[order]])
 		{
 			cout << "所选行动不可用" << endl << "请重新输入";
 			cin >> m[1].move[order];
@@ -138,18 +138,18 @@ void playerCheck::move_check(int order)
 	}
 }
 
-void playerCheck::attackmove_check(int order)
+void playerCheck::attackmoveCheck(int order)
 {
 	Check check;
-	while (!isbetween(m[1].move[order], choice) || doubleattack_check(order) || !check.isattack(m[1].move[order])
-		|| !activechoice[1][m[1].move[order]])
+	while (!isbetween(m[1].move[order], choice) || doubleattackCheck(order) || !check.isattack(m[1].move[order])
+		|| !active_choice[1][m[1].move[order]])
 	{
 		if (!isbetween(m[1].move[order], choice))
 		{
 			cout << "不在可选范围" << endl << "请重新输入";
 			cin >> m[1].move[order];
 		}
-		if (doubleattack_check(order))
+		if (doubleattackCheck(order))
 		{
 			cout << "多人时不能使用双的攻击" << endl << "请重新输入";
 			cin >> m[1].move[order];
@@ -159,7 +159,7 @@ void playerCheck::attackmove_check(int order)
 			cout << "不是攻击类型" << endl << "请重新输入";
 			cin >> m[1].move[order];
 		}
-		if (!activechoice[1][m[1].move[order]])
+		if (!active_choice[1][m[1].move[order]])
 		{
 			cout << "所选行动不可用" << endl << "请重新输入";
 			cin >> m[1].move[order];
@@ -167,24 +167,24 @@ void playerCheck::attackmove_check(int order)
 	}
 }
 
-bool playerCheck::consume_check()
+bool playerCheck::consumeCheck()
 {
 	ACT.comsume();
-	if (RULE::rule_())
+	if (Rule::withinRule())
 	{
-		extract_of_status();
+		extractOfStatus();
 		return false;
 	}
 	else
 	{
-		extract_of_status();
+		extractOfStatus();
 		return true;
 	}
 }
 
-void playerCheck::at_check(int order, vector<bool> haveattacked)
+void playerCheck::atCheck(int order, vector<bool> haveattacked)
 {
-	while (!isbetween(m[1].at[order], people) || multiattack_target_check(order, haveattacked))
+	while (!isbetween(m[1].at[order], people) || multiattackTargetCheck(order, haveattacked))
 	{
 		if (!isbetween(m[1].at[order], people))
 		{
@@ -193,7 +193,7 @@ void playerCheck::at_check(int order, vector<bool> haveattacked)
 		}
 		if (m[1].move[order] == 26)//是挑衅
 		{
-			switch (multiattack_target_check(order, haveattacked))
+			switch (multiattackTargetCheck(order, haveattacked))
 			{
 			case 1:
 				printf("不能挑衅自己\n重新选择目标");
@@ -211,7 +211,7 @@ void playerCheck::at_check(int order, vector<bool> haveattacked)
 		}
 		else
 		{
-			switch (multiattack_target_check(order, haveattacked))
+			switch (multiattackTargetCheck(order, haveattacked))
 			{
 			case 1:
 				printf("不能打自己\n重新选择目标");
@@ -231,7 +231,7 @@ void playerCheck::at_check(int order, vector<bool> haveattacked)
 	}
 }
 
-bool playerCheck::doubleattack_check(int order)
+bool playerCheck::doubleattackCheck(int order)
 {
 	if ((m[1].at[order] == 3 || m[1].at[order] == 15 || m[1].at[order] == 19) && alivepeople > 2)
 		return true;
@@ -239,7 +239,7 @@ bool playerCheck::doubleattack_check(int order)
 		return false;
 }
 
-int playerCheck::comeon_check(int order)
+int playerCheck::comeonCheck(int order)
 {
 	if (m_[1].move[order] == 25 && m[1].move[order] == 25)
 		return 2;
@@ -248,14 +248,14 @@ int playerCheck::comeon_check(int order)
 	return 0;
 }
 
-bool playerCheck::provoke_check(int order)
+bool playerCheck::provokeCheck(int order)
 {
 	if (turn == 1 && m[1].move[order] == 26)
 		return 1;
 	return 0;
 }
 
-int playerCheck::multiattack_target_check(int order, vector<bool> haveattacked)
+int playerCheck::multiattackTargetCheck(int order, vector<bool> haveattacked)
 {
 	if (m[1].at[order] == 1)
 		return 1;
@@ -266,7 +266,7 @@ int playerCheck::multiattack_target_check(int order, vector<bool> haveattacked)
 	return 0;
 }
 
-void playerCheck::extract_of_status()
+void playerCheck::extractOfStatus()
 {
 	for (int i = 0; i <= people; i++)
 	{

@@ -3,7 +3,7 @@
 //初始化程序
 class Initialization{
 public:
-	static void choose_a_mode();
+	static void chooseMode();
 	static void readin(const char*);//读入
 	static int defineDifficulty();//初始化难度,将difficulty_o转化成难度百分比等级，判定人机采用高级算法的概率
 	static void message(const char* filein, const char* startmsg, const char* endmsg);
@@ -17,8 +17,8 @@ public:
 	static int mode_out();
 private:
 	static void introduction();//介绍游戏规则
-	static void readin_file(const char* settings);//从文件中读入初始设定
-	static void readin_keyboard();//从键盘上输入初始设定
+	static void readinFile(const char* settings);//从文件中读入初始设定
+	static void readinKeyboard();//从键盘上输入初始设定
 private:
 	static vector<int> HP0, bullet0, sword0, pause0;//返回初始各个状态值
 	static vector<int> add_bullet_num, add_sword_num;

@@ -3,18 +3,18 @@
 #include"check.h"//显然要用到
 #include"..\screen classes\Initialization.h"//要用到difficulty
 #include"act.h"//模拟时要用到
-void Choose_your_action::player_in_action()
+void ChooseYoueAction::PlayerInAction()
 {
 	playerCheck playercheck;
 	Check check;
 	cin >> m[1].move[1];
-	playercheck.move_check(1);
+	playercheck.moveCheck(1);
 	if (check.isattack(m[1].move[1]))//攻击类型
 	{
 		cout << "目标？";
 		cin >> m[1].at[1];
 		vector<bool> haveattacked(people + 1, false);
-		playercheck.at_check(1, haveattacked);
+		playercheck.atCheck(1, haveattacked);
 		haveattacked[m[1].at[1]] = true;
 		for (int order = 2; ; order++)//第几个攻击
 		{
@@ -22,10 +22,10 @@ void Choose_your_action::player_in_action()
 			cin >> m[1].move[order];
 			if (m[1].move[order])
 			{
-				playercheck.attackmove_check(order);
+				playercheck.attackmoveCheck(order);
 				cout << "目标？";
 				cin >> m[1].at[order];
-				playercheck.at_check(order, haveattacked);
+				playercheck.atCheck(order, haveattacked);
 				haveattacked[m[1].at[order]] = true;
 			}
 			else
@@ -37,7 +37,7 @@ void Choose_your_action::player_in_action()
 		cout << "目标？";
 		cin >> m[1].at[1];
 		vector<bool> haveattacked(people + 1, false);
-		playercheck.at_check(1, haveattacked);
+		playercheck.atCheck(1, haveattacked);
 		haveattacked[m[1].at[1]] = true;
 		for (int order = 2; ; order++)//第几个攻击
 		{
@@ -45,7 +45,7 @@ void Choose_your_action::player_in_action()
 			cin >> m[1].at[order];
 			if (m[1].at[order])
 			{
-				playercheck.at_check(order, haveattacked);
+				playercheck.atCheck(order, haveattacked);
 				haveattacked[m[1].at[order]] = true;
 			}
 			else
@@ -56,15 +56,15 @@ void Choose_your_action::player_in_action()
 	{
 		m[1].at[1] = 1;//默认给自己补给
 	}
-	if (playercheck.consume_check())
+	if (playercheck.consumeCheck())
 	{
 		cout << endl;
 		cout << "资源不够！";
-		player_in_action();//再走一次
+		PlayerInAction();//再走一次
 	}
 }
 
-void Choose_your_action::CPU_in_action()
+void ChooseYoueAction::CPUInAction()
 {
 	if (turn == 1 && psa() == 0 && pba() == 0)
 	{
@@ -83,7 +83,7 @@ void Choose_your_action::CPU_in_action()
 			CPUhaveattacked[j].assign(people + 1, 0);//清空，使之为0
 			do {
 				arbitraryrange(m[j].move[1], choice);
-				check.move_check(j,1);
+				check.moveCheck(j,1);
 			} while ((!check.isattack(m[j].move[1]) && multiattack == 2));//第一次multiattack没什么用？但是若未通过benefit就有用了 
 			//非攻击非挑衅类型
 			if (!check.isattack(m[j].move[1]) && m[j].at[1] != 26)
@@ -92,7 +92,7 @@ void Choose_your_action::CPU_in_action()
 			else if (m[j].move[1] == 26)
 			{
 				arbitraryrange(m[j].at[1], people);
-				check.at_check(j, 1, CPUhaveattacked[j]);
+				check.atCheck(j, 1, CPUhaveattacked[j]);
 				CPUhaveattacked[j][m[j].at[1]] = true;
 				int x = 0;
 				for (int order = 2; order <= alivepeople - 1; order++)
@@ -104,7 +104,7 @@ void Choose_your_action::CPU_in_action()
 						multiattack = 1;
 						m[j].move[order] = 26;
 						arbitraryrange(m[j].at[1], people);
-						check.at_check(j, 1, CPUhaveattacked[j]);
+						check.atCheck(j, 1, CPUhaveattacked[j]);
 						//不打死人，不打自己，不打打过的人。
 						CPUhaveattacked[j][m[j].at[order]] = true;
 					}
@@ -115,7 +115,7 @@ void Choose_your_action::CPU_in_action()
 			else//决定multiatttack
 			{
 				arbitraryrange(m[j].at[1], people);
-				check.at_check(j, 1, CPUhaveattacked[j]);
+				check.atCheck(j, 1, CPUhaveattacked[j]);
 				CPUhaveattacked[j][m[j].at[1]] = true;
 				int x = 0;
 				for (int order = 2; order <= alivepeople - 1; order++)
@@ -126,9 +126,9 @@ void Choose_your_action::CPU_in_action()
 					{	//add one more attack
 						multiattack = 1;
 						arbitraryrange(m[j].move[order], choice);
-						check.attackmove_check(j, order);
+						check.attackmoveCheck(j, order);
 						arbitraryrange(m[j].at[order], people);
-						check.at_check(j, order, CPUhaveattacked[j]);
+						check.atCheck(j, order, CPUhaveattacked[j]);
 						CPUhaveattacked[j][m[j].at[order]] = true;
 					}
 					else break;
@@ -158,14 +158,14 @@ void Choose_your_action::CPU_in_action()
 				if (multiattack == 1)multiattack++;
 			}
 			else multiattack = 0;
-			extract_of_status();
-			ACT.cls_of_instant_value();
+			extractOfStatus();
+			ACT.clsOfInstantValue();
 		}
 
 	}
 }
 
-void Choose_your_action::repeteaction(const char* move_history)
+void ChooseYoueAction::repeteAction(const char* move_history)
 {
 	ifstream fin;
 	fin.open(move_history);
@@ -184,7 +184,7 @@ void Choose_your_action::repeteaction(const char* move_history)
 	fin.close();
 }
 
-void Choose_your_action::print_move_history(const char* move_history)
+void ChooseYoueAction::fprintMoveHistory(const char* move_history)
 {
 	ofstream fout;
 	fout.open(move_history);
@@ -206,7 +206,7 @@ void Choose_your_action::print_move_history(const char* move_history)
 	fout.close();
 }
 
-void Choose_your_action::onlycharge()
+void ChooseYoueAction::onlycharge()
 {
 	for (int from = 2; from <= people; from++)
 	{
@@ -218,7 +218,7 @@ void Choose_your_action::onlycharge()
 	}
 }
 
-int Choose_your_action::pba(int from)
+int ChooseYoueAction::pba(int from)
 {
 	for (int i = 1; i <= people; i++)
 	{
@@ -233,7 +233,7 @@ int Choose_your_action::pba(int from)
 	return 0;
 }
 
-int Choose_your_action::psa(int from)
+int ChooseYoueAction::psa(int from)
 {
 	for (int i = 1; i <= people; i++)
 	{
@@ -258,7 +258,7 @@ int Choose_your_action::psa(int from)
 	return 0;
 }
 
-bool Choose_your_action::pba()
+bool ChooseYoueAction::pba()
 {
 	for (int from = 1; from <= people; from++)
 	{
@@ -268,7 +268,7 @@ bool Choose_your_action::pba()
 	return false;
 }
 
-bool Choose_your_action::psa()
+bool ChooseYoueAction::psa()
 {
 	for (int from = 1; from <= people; from++)
 	{
@@ -278,7 +278,7 @@ bool Choose_your_action::psa()
 	return false;
 }
 
-void Choose_your_action::extract_of_status()
+void ChooseYoueAction::extractOfStatus()
 {
 	for (int i = 0; i <= people; i++)
 	{

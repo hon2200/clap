@@ -1,6 +1,6 @@
 turn 0
 people 2
-alivepeople2
+alivepeople1
 player 0's HP = 0
 player 0's  bullet=0
 player 0's  sword=0
@@ -9,9 +9,9 @@ player 1's HP = 100
 player 1's  bullet=100
 player 1's  sword=100
 player 1's  pause=0
-player 2's HP = 1
-player 2's  bullet=0
-player 2's  sword=0
+player 2's HP = 2
+player 2's  bullet=2
+player 2's  sword=2
 player 2's  pause=0
 
 
@@ -20,7 +20,7 @@ player 2's  pause=0
 
 turn 1
 people 2
-alivepeople2
+alivepeople1
 player 0's HP = 0
 player 0's  bullet=0
 player 0's  sword=0
@@ -29,23 +29,24 @@ player 1's HP = 100
 player 1's  bullet=200
 player 1's  sword=100
 player 1's  pause=0
-player 2's HP = 1
+player 2's HP = 2
 player 2's  bullet=1
-player 2's  sword=0
+player 2's  sword=2
 player 2's  pause=0
 
 player 1's  order 1 move is 1 aims at 1
-player 2's  order 1 move is 1 aims at 2
+player 2's  order 1 move is 6 aims at 2
 
 player 1's  order 1 add is 1 aims at 1 numbers are 100
-player 2's  order 1 add is 1 aims at 2 numbers are 1
+player 2 docas 1
+player 2's  order 1 ca is 1
 
 
 the wounded player 1's suspected killer source2is1with a head benefit of0
 the wounded player 1's suspected attacker source2is1
 turn 2
 people 2
-alivepeople2
+alivepeople1
 player 0's HP = 0
 player 0's  bullet=0
 player 0's  sword=0
@@ -54,23 +55,22 @@ player 1's HP = 100
 player 1's  bullet=300
 player 1's  sword=100
 player 1's  pause=0
-player 2's HP = 1
-player 2's  bullet=1
-player 2's  sword=0
+player 2's HP = 2
+player 2's  bullet=2
+player 2's  sword=2
 player 2's  pause=0
 
 player 1's  order 1 move is 1 aims at 1
-player 2's  order 1 move is 5 aims at 2
+player 2's  order 1 move is 1 aims at 2
 
 player 1's  order 1 add is 1 aims at 1 numbers are 100
-player 2 doblocks 2
-player 2's  order 1 block is 2
+player 2's  order 1 add is 1 aims at 2 numbers are 1
 
 
 
 turn 3
 people 2
-alivepeople2
+alivepeople1
 player 0's HP = 0
 player 0's  bullet=0
 player 0's  sword=0
@@ -79,319 +79,69 @@ player 1's HP = 100
 player 1's  bullet=400
 player 1's  sword=100
 player 1's  pause=0
-player 2's HP = 1
-player 2's  bullet=0
-player 2's  sword=0
+player 2's HP = 2
+player 2's  bullet=2
+player 2's  sword=2
 player 2's  pause=0
 
 player 1's  order 1 move is 1 aims at 1
-player 2's  order 1 move is 6 aims at 2
+player 2's  order 1 move is 26 aims at 2
 
 player 1's  order 1 add is 1 aims at 1 numbers are 100
-player 2 docas 1
-player 2's  order 1 ca is 1
+player 2's  order 1 provoke is 1 aims at 2
 
 
 
 turn 4
 people 2
-alivepeople2
+alivepeople1
 player 0's HP = 0
 player 0's  bullet=0
 player 0's  sword=0
 player 0's  pause=0
 player 1's HP = 100
-player 1's  bullet=400
+player 1's  bullet=399
 player 1's  sword=100
 player 1's  pause=0
 player 2's HP = 1
-player 2's  bullet=1
-player 2's  sword=0
+player 2's  bullet=2
+player 2's  sword=2
 player 2's  pause=0
 
-player 1's  order 1 move is 1 aims at 1
-player 2's  order 1 move is 25 aims at 2
+player 1's  order 1 move is 2 aims at 2
+player 2's  order 1 move is 4 aims at 2
 
-player 1's  order 1 add is 1 aims at 2 numbers are 1
-player 2's  comeon is1
+player 1's  order 1 shoot is 1 aims at 2
+player 2 doblocks 1
+player 2's  order 1 block is 1
 
+player 1's  attack at 2 in order 1 leveling:4 damaging1
 
-the wounded player 1's suspected killer source2is1with a head benefit of0
-
+the wounded player 2's suspected killer source1is1with a head benefit of0
+the wounded player 2's suspected attacker source1is1
 turn 5
 people 2
-alivepeople2
+alivepeople1
 player 0's HP = 0
 player 0's  bullet=0
 player 0's  sword=0
 player 0's  pause=0
 player 1's HP = 100
-player 1's  bullet=500
+player 1's  bullet=398
 player 1's  sword=100
 player 1's  pause=0
-player 2's HP = 1
-player 2's  bullet=0
-player 2's  sword=0
-player 2's  pause=0
-
-player 1's  order 1 move is 1 aims at 1
-player 2's  order 1 move is 6 aims at 2
-
-player 1's  order 1 add is 1 aims at 1 numbers are 100
-player 2 docas 1
-player 2's  order 1 ca is 1
-
-
-the wounded player 1's suspected killer source2is1with a head benefit of0
-the wounded player 1's suspected attacker source2is1
-turn 6
-people 2
-alivepeople2
-player 0's HP = 0
-player 0's  bullet=0
-player 0's  sword=0
-player 0's  pause=0
-player 1's HP = 100
-player 1's  bullet=600
-player 1's  sword=100
-player 1's  pause=0
-player 2's HP = 1
-player 2's  bullet=1
-player 2's  sword=0
-player 2's  pause=0
-
-player 1's  order 1 move is 1 aims at 1
-player 2's  order 1 move is 1 aims at 2
-
-player 1's  order 1 add is 1 aims at 1 numbers are 100
-player 2's  order 1 add is 1 aims at 2 numbers are 1
-
-
-
-turn 7
-people 2
-alivepeople2
-player 0's HP = 0
-player 0's  bullet=0
-player 0's  sword=0
-player 0's  pause=0
-player 1's HP = 100
-player 1's  bullet=700
-player 1's  sword=100
-player 1's  pause=0
-player 2's HP = 1
-player 2's  bullet=1
-player 2's  sword=0
-player 2's  pause=0
-
-player 1's  order 1 move is 1 aims at 1
-player 2's  order 1 move is 4 aims at 2
-
-player 1's  order 1 add is 1 aims at 1 numbers are 100
-player 2 doblocks 1
-player 2's  order 1 block is 1
-
-
-the wounded player 1's suspected killer source2is1with a head benefit of0
-the wounded player 1's suspected attacker source2is1
-turn 8
-people 2
-alivepeople2
-player 0's HP = 0
-player 0's  bullet=0
-player 0's  sword=0
-player 0's  pause=0
-player 1's HP = 100
-player 1's  bullet=800
-player 1's  sword=100
-player 1's  pause=0
-player 2's HP = 1
-player 2's  bullet=1
-player 2's  sword=0
-player 2's  pause=0
-
-player 1's  order 1 move is 1 aims at 1
-player 2's  order 1 move is 4 aims at 2
-
-player 1's  order 1 add is 1 aims at 1 numbers are 100
-player 2 doblocks 1
-player 2's  order 1 block is 1
-
-
-
-turn 9
-people 2
-alivepeople2
-player 0's HP = 0
-player 0's  bullet=0
-player 0's  sword=0
-player 0's  pause=0
-player 1's HP = 100
-player 1's  bullet=900
-player 1's  sword=100
-player 1's  pause=0
-player 2's HP = 1
+player 2's HP = 0
 player 2's  bullet=2
-player 2's  sword=0
+player 2's  sword=3
 player 2's  pause=0
 
-player 1's  order 1 move is 1 aims at 1
-player 2's  order 1 move is 1 aims at 2
+player 1's  order 1 move is 2 aims at 2
+player 2's  order 1 move is 7 aims at 2
 
-player 1's  order 1 add is 1 aims at 1 numbers are 100
-player 2's  order 1 add is 1 aims at 2 numbers are 1
+player 1's  order 1 shoot is 1 aims at 2
+player 2's  order 1 add is 2 aims at 2 numbers are 1
 
+player 1's  attack at 2 in order 1 leveling:4 damaging1
 
-
-turn 10
-people 2
-alivepeople2
-player 0's HP = 0
-player 0's  bullet=0
-player 0's  sword=0
-player 0's  pause=0
-player 1's HP = 100
-player 1's  bullet=900
-player 1's  sword=100
-player 1's  pause=0
-player 2's HP = 1
-player 2's  bullet=3
-player 2's  sword=0
-player 2's  pause=0
-
-player 1's  order 1 move is 1 aims at 1
-player 2's  order 1 move is 25 aims at 2
-
-player 1's  order 1 add is 1 aims at 2 numbers are 1
-player 2's  comeon is1
-
-
-
-turn 11
-people 2
-alivepeople2
-player 0's HP = 0
-player 0's  bullet=0
-player 0's  sword=0
-player 0's  pause=0
-player 1's HP = 100
-player 1's  bullet=1000
-player 1's  sword=100
-player 1's  pause=0
-player 2's HP = 1
-player 2's  bullet=2
-player 2's  sword=0
-player 2's  pause=0
-
-player 1's  order 1 move is 1 aims at 1
-player 2's  order 1 move is 6 aims at 2
-
-player 1's  order 1 add is 1 aims at 1 numbers are 100
-player 2 docas 1
-player 2's  order 1 ca is 1
-
-
-the wounded player 1's suspected killer source2is1with a head benefit of0
-the wounded player 1's suspected attacker source2is1
-turn 12
-people 2
-alivepeople2
-player 0's HP = 0
-player 0's  bullet=0
-player 0's  sword=0
-player 0's  pause=0
-player 1's HP = 100
-player 1's  bullet=1100
-player 1's  sword=100
-player 1's  pause=0
-player 2's HP = 1
-player 2's  bullet=2
-player 2's  sword=0
-player 2's  pause=0
-
-player 1's  order 1 move is 1 aims at 1
-player 2's  order 1 move is 4 aims at 2
-
-player 1's  order 1 add is 1 aims at 1 numbers are 100
-player 2 doblocks 1
-player 2's  order 1 block is 1
-
-
-
-turn 13
-people 2
-alivepeople2
-player 0's HP = 0
-player 0's  bullet=0
-player 0's  sword=0
-player 0's  pause=0
-player 1's HP = 100
-player 1's  bullet=1200
-player 1's  sword=100
-player 1's  pause=0
-player 2's HP = 1
-player 2's  bullet=2
-player 2's  sword=0
-player 2's  pause=0
-
-player 1's  order 1 move is 1 aims at 1
-player 2's  order 1 move is 4 aims at 2
-
-player 1's  order 1 add is 1 aims at 1 numbers are 100
-player 2 doblocks 1
-player 2's  order 1 block is 1
-
-
-the wounded player 1's suspected killer source2is1with a head benefit of0
-the wounded player 1's suspected attacker source2is1
-turn 14
-people 2
-alivepeople2
-player 0's HP = 0
-player 0's  bullet=0
-player 0's  sword=0
-player 0's  pause=0
-player 1's HP = 100
-player 1's  bullet=1300
-player 1's  sword=100
-player 1's  pause=0
-player 2's HP = 1
-player 2's  bullet=3
-player 2's  sword=0
-player 2's  pause=0
-
-player 1's  order 1 move is 1 aims at 1
-player 2's  order 1 move is 1 aims at 2
-
-player 1's  order 1 add is 1 aims at 1 numbers are 100
-player 2's  order 1 add is 1 aims at 2 numbers are 1
-
-
-the wounded player 1's suspected killer source2is1with a head benefit of0
-the wounded player 1's suspected attacker source2is1
-turn 15
-people 2
-alivepeople2
-player 0's HP = 0
-player 0's  bullet=0
-player 0's  sword=0
-player 0's  pause=0
-player 1's HP = 98
-player 1's  bullet=1400
-player 1's  sword=100
-player 1's  pause=0
-player 2's HP = 1
-player 2's  bullet=1
-player 2's  sword=0
-player 2's  pause=0
-
-player 1's  order 1 move is 1 aims at 1
-player 2's  order 1 move is 12 aims at 1
-
-player 1's  order 1 add is 1 aims at 1 numbers are 100
-player 2's  order 1 shoot is 3 aims at 1
-
-player 2's  attack at 1 in order 1 leveling:4 damaging2
-
-the wounded player 1's suspected killer source2is1with a head benefit of0
-the wounded player 1's suspected attacker source2is1
+the wounded player 2's suspected killer source1is1with a head benefit of0
+the wounded player 2's suspected attacker source1is1

@@ -6,9 +6,9 @@ int main()
 	//全游戏循环//除非玩家输入指令否则不会退出
 	while (1)
 	{
-		Initialization::choose_a_mode();
-		in_game_cycle_o::enter_mode();
-		if (Finalization::whether_exit())
+		Initialization::chooseMode();
+		InGame::enterMode();
+		if (Finalization::whetherExit())
 			break;
 	}
 }
@@ -23,48 +23,48 @@ int main()
 //		turn = 0;
 //		Initialization::readin("saving files\\settings.txt");
 //		Initialization::defineDifficulty();
-//		move_history_o::initialization();
-//		status_history_o::initialization();
-//		ACTHistory::initialization();
-//		status_history_o::value_in();
+//		MoveHistory::initialization();
+//		StatusHistory::initialization();
+//		ActHistory::initialization();
+//		StatusHistory::valueIn();
 //		//回合内小循环//每个回合走一遍
-//		while (RULE::rule_())
+//		while (Rule::withinRule())
 //		{
 //			turn++;
 //			//对变量进行刷新
-//			move_history_o::refreshing();
-//			status_history_o::refreshing();
-//			ACTHistory::refreshing();
+//			MoveHistory::refreshing();
+//			StatusHistory::refreshing();
+//			ActHistory::refreshing();
 //			//回合开始阶段↓
 //			//显示需要显示的东西
-//			Screen::print_turn();
-//			Screen::print_status();
-//			Screen::print_actionguide();
+//			Screen::printTurn();
+//			Screen::printStatus();
+//			Screen::printActionGuide();
 //			//行动阶段↓
 //			//先引导player做出行动，再让电脑做出行动
-//			Choose_your_action::player_in_action();
-//			Choose_your_action::CPU_in_action();
-//			move_history_o::cls_of_moves_of_the_dead();
-//			/*choose_your_action.repeteaction("move_history.txt");*/
+//			ChooseYoueAction::PlayerInAction();
+//			ChooseYoueAction::CPUInAction();
+//			MoveHistory::clsMovesFromDead();
+//			/*choose_your_action.repeteAction("move_history.txt");*/
 //			//打印行动
-//			Screen::print_act();
+//			Screen::printAct();
 //			//结算阶段↓
 //			//操作玩家们的状态值
 //			ACT.act();
 //			ACT.performattack();
-//			//人头结算阶段↓//理论上在上回合末，但是为了rule_的正确计算移动到这里
-//			ACT.head_gain();
-//			people_o::the_refresh_of_people();
-//			ACT.fprint_ACTHistory("saving files\\history.txt");
-//			Choose_your_action::print_move_history("saving files\\history.txt");
+//			//人头结算阶段↓//理论上在上回合末，但是为了withinRule的正确计算移动到这里
+//			ACT.headGain();
+//			People::theRefreshOfAlivePeople();
+//			ACT.fprintActHistory("saving files\\history.txt");
+//			ChooseYoueAction::fprintMoveHistory("saving files\\history.txt");
 //		}
 //		//游戏结束了
 //		Finalization::finalscreen();
-//		move_history_o::finalization();
-//		status_history_o::finalization();
-//		ACTHistory::finalization();
+//		MoveHistory::finalization();
+//		StatusHistory::finalization();
+//		ActHistory::finalization();
 //		turn = 0;
-//		if (!Finalization::whether_restart())
+//		if (!Finalization::whetherRestart())
 //			break;
 //	}
 //}

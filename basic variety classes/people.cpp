@@ -1,25 +1,25 @@
 #include"..\all tool files\i++.h"
-void people_o::people_o_in(int n)
+void People::howMany(int n)
 {
-	people_num = n;
-	alivepeople_num = n;
+	initial_people = n;
+	alive_people = n;
 }
-int people_o::people_out()
+int People::getInitialPeople()
 {
-	return people_num;
+	return initial_people;
 }
-int people_o::alivepeople_out()
+int People::getAlivePeople()
 {
-	return alivepeople_num;
+	return alive_people;
 }
-void people_o::the_refresh_of_people()
+void People::theRefreshOfAlivePeople()
 {
-	alivepeople_num = 0;
-	for (int from = 0; from <= people_num; from++)
+	alive_people = 0;
+	for (int from = 0; from <= initial_people; from++)
 	{
 		if (HP[from] > 0)
-			alivepeople_num++;
+			alive_people++;
 	}
 }
-int people_o::people_num = 0;
-int people_o::alivepeople_num = 0;
+int People::initial_people = 0;
+int People::alive_people = 0;

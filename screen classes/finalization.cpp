@@ -3,7 +3,7 @@
 #include"Finalization.h"
 void Finalization::finalscreen()
 {
-	if (RULE::unexpected_error())
+	if (Rule::unexpectedError())
 	{
 		cout << "system_error" << endl;
 		return;
@@ -16,7 +16,7 @@ void Finalization::finalscreen()
 		cout << "you lose" << endl;
 }
 
-bool Finalization::whether_restart()
+bool Finalization::whetherRestart()
 {
 	cout << "Play again?yes:1,no:0" << endl;
 	int u = 0;
@@ -27,7 +27,7 @@ bool Finalization::whether_restart()
 		return true;
 }
 
-bool Finalization::whether_exit()
+bool Finalization::whetherExit()
 {
 	cout << "whether exit?yes:1,no:0" << endl;
 	bool x = false;
@@ -59,7 +59,7 @@ void Finalization::message(const char* filein, const char* startmsg, const char*
 	fIn.close();
 }
 
-bool RULE::rule_()
+bool Rule::withinRule()
 {
 	for (int from = 1; from <= people; from++)
 	{
@@ -76,7 +76,7 @@ bool RULE::rule_()
 	return true;
 }
 
-bool RULE::unexpected_error()
+bool Rule::unexpectedError()
 {
 	for (int from = 1; from <= people; from++)
 	{
@@ -91,7 +91,7 @@ bool RULE::unexpected_error()
 	return false;
 }
 
-vector<int> RULE::winner()
+vector<int> Rule::winner()
 {
 	vector<int> winner;
 	for (int i = 1; i <= people; i++)
@@ -102,7 +102,7 @@ vector<int> RULE::winner()
 	return winner;
 }
 
-bool RULE::win_or_lose()
+bool Rule::winOrLose()
 {
 	if (HP[1] > 0)
 		return true;

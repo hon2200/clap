@@ -1,6 +1,6 @@
 #include"Initialization.h"
 #include"..\all tool files\i++.h"
-void Initialization::choose_a_mode()
+void Initialization::chooseMode()
 {
 	cout << "clapping:pupil's game" << endl;
 	cout << "新手教程：1，闯关模式：2，自由模式：3，经典模式：4，规则介绍：5" << endl;
@@ -10,7 +10,7 @@ void Initialization::choose_a_mode()
 	if (mode == 5)
 	{
 		introduction();
-		choose_a_mode();
+		chooseMode();
 	}
 }
 
@@ -38,17 +38,17 @@ void Initialization::readin(const char* filein)
 	bool x = true;
 	cin >> x;
 	if (x)
-		readin_keyboard();
+		readinKeyboard();
 	else
-		readin_file(filein);
+		readinFile(filein);
 }
 
-void Initialization::readin_keyboard()
+void Initialization::readinKeyboard()
 {
 	cout<<"how many people?";
 	int n = 0;
 	cin >> n;
-	people_o::people_o_in(n);
+	People::howMany(n);
 	cout << "Difficulty?(暂时只支持1难度)";
 	cin >> difficulty_o;
 	difficulty_o = 1;
@@ -93,7 +93,7 @@ void Initialization::readin_keyboard()
 	}
 }
 
-void Initialization::readin_file(const char* settings)
+void Initialization::readinFile(const char* settings)
 {
 	ifstream fIn;
 	fIn.open(settings);
@@ -109,7 +109,7 @@ void Initialization::readin_file(const char* settings)
 	if (!gb_getData(n, fIn))
 		cout << "读入数据失败" << endl;
 	else
-		people_o::people_o_in(n);//对people进行赋值
+		People::howMany(n);//对people进行赋值
 	if (!gb_getData(difficulty_o, fIn))
 		cout << "读入数据失败" << endl;
 	add_bullet_num.push_back(0);
@@ -128,14 +128,14 @@ void Initialization::readin_file(const char* settings)
 			cout << "读入数据失败" << endl;
 		add_sword_num.push_back(x);
 	}
-	activechoice.push_back(vector<int>(0));
+	active_choice.push_back(vector<int>(0));
 	for (int i = 1; i <= people; i++)
 	{
-		activechoice.push_back(vector<int>(1));
+		active_choice.push_back(vector<int>(1));
 		for (int j = 1; j <= choice; j++)
 		{
-			activechoice[i].push_back(0);
-			if (!gb_getData(activechoice[i][j], fIn))
+			active_choice[i].push_back(0);
+			if (!gb_getData(active_choice[i][j], fIn))
 				cout << "读入数据失败" << endl;
 		}
 	}

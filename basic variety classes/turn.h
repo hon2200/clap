@@ -1,6 +1,6 @@
 #pragma once
 //»ØºÏÊı
-class turn_o {
+class Turn {
 public:
 	static int turn_;
 };

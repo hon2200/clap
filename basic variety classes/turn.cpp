@@ -1,2 +1,2 @@
 #include"turn.h"
-int turn_o::turn_ = 0;
+int Turn::turn_ = 0;

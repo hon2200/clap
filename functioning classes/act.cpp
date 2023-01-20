@@ -2,11 +2,11 @@
 #include"..\all tool files\i++.h"
 #include"act.h"
 #include"..\screen classes\Initialization.h"//要用到里面的add_bullet_num,add_sword_num
-ACT_o::ACT_o()
+Act::Act()
 {
 	vector<vector<vector<int>>>n3_int(people + 1, vector<vector<int>>(people + 1, vector<int>(people + 1, 0)));
 	shoot = n3_int, stab = n3_int;
-	vector<vector<vector<add_o>>>n3_add_o(people + 1, vector<vector<add_o>>(people + 1, vector<add_o>(people + 1, add_o())));
+	vector<vector<vector<Add>>>n3_add_o(people + 1, vector<vector<Add>>(people + 1, vector<Add>(people + 1, Add())));
 	add = n3_add_o;
 	vector<vector<int>>n2_int(people + 1, vector<int>(people + 1, 0));
 	block = n2_int, ca = n2_int;
@@ -16,13 +16,13 @@ ACT_o::ACT_o()
 	comeon = n1_bool;
 	vector<vector<bool>>n2_bool_5(people + 1, vector<bool>(5, 0));
 	doblock = n2_bool_5, doca = n2_bool_5;
-	vector<vector<attack_o>>n2_attack_o(people + 1, vector<attack_o>(people + 1, attack_o()));
+	vector<vector<Attack>>n2_attack_o(people + 1, vector<Attack>(people + 1, Attack()));
 	attack = n2_attack_o;
-	vector<damage_source_o>n1_ds_o(people + 1, damage_source_o());
+	vector<DamageSource>n1_ds_o(people + 1, DamageSource());
 	ds = n1_ds_o;
 }
 
-void ACT_o::shoot__()
+void Act::shoot__()
 {
 	for (int from = 1; from <= people; from++)
 	{
@@ -73,7 +73,7 @@ void ACT_o::shoot__()
 	}
 }
 
-void ACT_o::block__()
+void Act::block__()
 {
 	for (int from = 1; from <= people; from++)
 	{
@@ -99,7 +99,7 @@ void ACT_o::block__()
 	}
 }
 
-void ACT_o::stab__()
+void Act::stab__()
 {
 	for (int from = 1; from <= people; from++)
 	{
@@ -144,7 +144,7 @@ void ACT_o::stab__()
 
 }
 
-void ACT_o::add__()
+void Act::add__()
 {
 	for (int from = 1; from <= people; from++)
 	{
@@ -162,7 +162,7 @@ void ACT_o::add__()
 	}
 }
 
-void ACT_o::counterattack__()
+void Act::counterattack__()
 {
 	for (int from = 1; from <= people; from++)
 	{
@@ -188,7 +188,7 @@ void ACT_o::counterattack__()
 	}
 }
 
-void ACT_o::provoke__()
+void Act::provoke__()
 {
 	for (int from = 1; from <= people; from++)
 	{
@@ -203,7 +203,7 @@ void ACT_o::provoke__()
 	}
 }
 
-bool ACT_o::somebodycomeon()
+bool Act::somebodycomeon()
 {
 	bool x = false;
 	for (int from = 1; from <= people; from++)
@@ -220,7 +220,7 @@ bool ACT_o::somebodycomeon()
 	return x;
 }
 
-void ACT_o::reaim()
+void Act::reaim()
 {
 	for (int to = 1; to <= people; to++)
 	{
@@ -291,7 +291,7 @@ void ACT_o::reaim()
 	}
 }
 
-void ACT_o::comsume()
+void Act::comsume()
 {
 	for (int from = 1; from <= people; from++)
 	{
@@ -323,7 +323,7 @@ void ACT_o::comsume()
 	}
 }
 
-void ACT_o::the_CD_of_sword()
+void Act::the_CD_of_sword()
 {
 	for (int from = 1; from <= people; from++)
 	{
@@ -342,7 +342,7 @@ void ACT_o::the_CD_of_sword()
 	}//剑的CD刷新机制
 }
 
-void ACT_o::lets_charge()
+void Act::lets_charge()
 {
 	for (int from = 1; from <= people; from++)
 	{
@@ -357,7 +357,7 @@ void ACT_o::lets_charge()
 	}//补给机制
 }
 
-void ACT_o::fprint_ACTHistory(const char* history)
+void Act::fprintActHistory(const char* history)
 {
 	ofstream fout;
 	fout.open(history);
@@ -459,7 +459,7 @@ void ACT_o::fprint_ACTHistory(const char* history)
 	fout.close();
 }
 
-void ACT_o::performattack()
+void Act::performattack()
 {
 	the_CD_of_sword();
 	lets_charge();
@@ -700,7 +700,7 @@ void ACT_o::performattack()
 	}
 }
 
-void ACT_o::act()
+void Act::act()
 {
 	if (!somebodycomeon())
 	{
@@ -712,7 +712,7 @@ void ACT_o::act()
 	}
 }
 
-void ACT_o::cls_of_instant_value()
+void Act::clsOfInstantValue()
 {
 	for (int from = 1; from <= people; from++)
 	{
@@ -740,7 +740,7 @@ void ACT_o::cls_of_instant_value()
 	}
 }
 
-void ACT_o::head_gain()
+void Act::headGain()
 {
 	for (int from = 1; from <= people; from++)
 	{
@@ -752,31 +752,31 @@ void ACT_o::head_gain()
 	}
 }
 
-add_o::add_o() :
+Add::Add() :
 	catagory(0), number(0)
 {}
 
-attack_o::attack_o() :
+Attack::Attack() :
 	damage(people + 1), level(people + 1)
 {}
 
-damage_source_o::damage_source_o() :
+DamageSource::DamageSource() :
 	benefit(0), attacker(people + 1, 0), killer(people + 1, 0)
 {}
 
-void ACTHistory::initialization()
+void ActHistory::initialization()
 {
-	ACT_history.push_back(ACT_o());
+	ACT_history.push_back(Act());
 }
 
-void ACTHistory::refreshing()
+void ActHistory::refreshing()
 {
-	ACT_history.push_back(ACT_o());
+	ACT_history.push_back(Act());
 }
 
-void ACTHistory::finalization()
+void ActHistory::finalization()
 {
 	ACT_history.clear();
 }
 
-vector<ACT_o> ACTHistory::ACT_history(0, ACT_o());
+vector<Act> ActHistory::ACT_history(0, Act());
